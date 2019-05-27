@@ -28,7 +28,9 @@ public class AdminDao {
 
 	}
 
-	//匹配用户名和安全问题
+	/**
+	*匹配用户名和安全问题
+	 */
 	public Map<String, String> Check(String account, String answer) {
 		DBHelper db = new DBHelper();
 		String sql = "select cname,answer from costumer where cname=? and answer =?";
@@ -38,7 +40,7 @@ public class AdminDao {
 		}
 		return null;
 	}
-	
+
 	//重置密码
 	public int Repwd(String account,String newpwd){
 		DBHelper dbHelper=new DBHelper();
