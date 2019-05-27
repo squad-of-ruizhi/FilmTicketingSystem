@@ -1,15 +1,14 @@
 package com.yc.one.UI;
 
 import com.swtdesigner.SWTResourceManager;
+import com.yc.one.DAO.AdminDao;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.*;
 
-import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.Text;
-import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+
+import java.util.Map;
 
 public class RePassword {
 
@@ -83,7 +82,20 @@ public class RePassword {
 		btnNewButton.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				
+				String repsd=text_1.getText();
+				if (text.getText().trim()!=repsd){
+					MessageBox mb2 = new MessageBox(shell,SWT.YES | SWT.NO | SWT.CANCEL |SWT.ERROR);
+					mb2.setText("错误提示:");
+					mb2.setMessage("请保持两次密码输入一致");
+					mb2.open();
+				}else{
+					AdminDao adminDao=new AdminDao();
+					Recall recall=new Recall();
+					int result=adminDao.Repwd(recall.getAccount(),repsd);
+
+				}
+
+
 			}
 		});
 

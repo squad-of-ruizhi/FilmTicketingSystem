@@ -21,6 +21,7 @@ public class Recall { //
 	protected Shell shell;
 	private Text text;
 	private Text text_1;
+	private String account=text.getText().trim();
 
 	/**
 	 * Launch the application.
@@ -48,6 +49,10 @@ public class Recall { //
 				display.sleep();
 			}
 		}
+	}
+
+	public String getAccount() {
+		return account;
 	}
 
 	/**
@@ -106,7 +111,7 @@ public class Recall { //
 		btnNewButton_1.setBounds(122, 412, 137, 42);
 		btnNewButton_1.setText("确定");
 
-		btnNewButton_1.addSelectionListener(new SelectionAdapter() {
+		btnNewButton_1.addSelectionListener(new SelectionAdapter() { //按下“确定”按钮后进行账户和密保问题的检测来确认身份
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				String name =text.getText().trim();
@@ -124,6 +129,8 @@ public class Recall { //
 
 			}
 		});
+
+
 	}
 
 
