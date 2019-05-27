@@ -38,5 +38,16 @@ public class AdminDao {
 		}
 		return null;
 	}
+	
+	//重置密码
+	public int Repwd(String account,String newpwd){
+		DBHelper dbHelper=new DBHelper();
+		String sql="UPDATE `FilmTicketingSystem`.`costumer` SET `pwd` = ? WHERE (`cname` = ?);";
+		int result = dbHelper.update(sql, account, newpwd);
+		if (result != -1) {
+			return result;
+		}
+		return -1;
+	}
 }
 
