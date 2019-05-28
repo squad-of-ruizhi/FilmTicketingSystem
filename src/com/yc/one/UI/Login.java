@@ -1,6 +1,7 @@
 package com.yc.one.UI;
 
 import com.swtdesigner.SWTResourceManager;
+import com.yc.one.UI.MainUI.MainUI;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;

@@ -1,4 +1,4 @@
-package com.yc.one.UI;
+package com.yc.one.UI.MainUI;
 
 import com.swtdesigner.SWTResourceManager;
 import org.eclipse.swt.widgets.Display;
@@ -7,10 +7,12 @@ import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.widgets.Combo;
+import org.eclipse.jface.viewers.ComboViewer;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.custom.SashForm;
 import org.eclipse.swt.widgets.Tree;
+import org.eclipse.swt.widgets.TreeColumn;
 import org.eclipse.swt.widgets.TreeItem;
 import org.eclipse.swt.widgets.Label;
 
@@ -56,7 +58,7 @@ public class MainUI {
 	protected void createContents() {
 		shell = new Shell();
 		shell.setBackgroundMode(SWT.INHERIT_DEFAULT);
-		shell.setBackgroundImage(SWTResourceManager.getImage(MainUI.class, "/image/13.png"));
+		shell.setBackgroundImage(SWTResourceManager.getImage(MainUI.class, "/images/13.png"));
 		shell.setSize(1143, 660);
 		shell.setText("影院售票系统");
 		shell.setLayout(new FillLayout(SWT.HORIZONTAL));
@@ -170,7 +172,7 @@ public class MainUI {
 		label_12.setText("优惠价：");
 		
 		Label label_13 = new Label(composite_2, SWT.NONE);
-		label_13.setImage(SWTResourceManager.getImage(MainUI.class, "/image/1.jpg"));
+		label_13.setImage(SWTResourceManager.getImage(MainUI.class, "/images/1.jpg"));
 		label_13.setBounds(591, 10, 100, 100);
 		
 		Label label_14 = new Label(composite_2, SWT.NONE);
@@ -214,6 +216,10 @@ public class MainUI {
 		
 		text = new Text(composite_2, SWT.BORDER);
 		text.setBounds(576, 220, 186, 28);
+		
+		Label label_21 = new Label(composite_2, SWT.NONE);
+		label_21.setBounds(87, 26, 76, 20);
+		label_21.setText("复仇者联盟4");
 		
 		Composite composite_3 = new Composite(sashForm_1, SWT.NONE);
 		sashForm_1.setWeights(new int[] {285, 310});
