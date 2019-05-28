@@ -21,7 +21,7 @@ public class Recall { //
 	protected Shell shell;
 	private Text text;
 	private Text text_1;
-	private String account=text.getText().trim();
+	private static String account=null;
 
 	/**
 	 * Launch the application.
@@ -52,6 +52,7 @@ public class Recall { //
 	}
 
 	public String getAccount() {
+
 		return account;
 	}
 
@@ -116,7 +117,7 @@ public class Recall { //
 			public void widgetSelected(SelectionEvent e) {
 				String name =text.getText().trim();
 				String qst=text_1.getText().trim();
-
+				account=name;
 				AdminDao adminDao=new AdminDao();
 				Map<String,String> map=adminDao.Check(name,qst);
 

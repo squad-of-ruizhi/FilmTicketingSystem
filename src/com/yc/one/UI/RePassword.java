@@ -84,15 +84,12 @@ public class RePassword {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				String repsd=text_1.getText();
-				if (text.getText().trim()!=repsd){
-					MessageBox mb2 = new MessageBox(shell,SWT.YES | SWT.NO | SWT.CANCEL |SWT.ERROR);
-					mb2.setText("错误提示:");
-					mb2.setMessage("密码修改失败，请保持两次密码输入一致");
-					mb2.open();
-				}else{
+				String compare=text.getText();
+				if (compare.equals(repsd)){
 					AdminDao adminDao=new AdminDao();
 					Recall recall=new Recall();
-					int result=adminDao.Repwd(recall.getAccount(),repsd);
+					String account=recall.getAccount();
+					int result=adminDao.Repwd(account,repsd);
 					System.out.println(result);
 					if(result!=-1){
 						InitData.RegisterUserInfo = result;
@@ -104,12 +101,16 @@ public class RePassword {
 						shell.dispose();
 						InitData.Login.open();
 					}else{
-						//
 						MessageBox mb = new MessageBox(shell,SWT.YES | SWT.CANCEL |SWT.ERROR);
 						mb.setText("错误提示");
 						mb.setMessage("密码修改失败，所填信息不能为空");
 						mb.open();
-				}
+					}
+				}else{
+					MessageBox mb2 = new MessageBox(shell,SWT.YES | SWT.NO | SWT.CANCEL |SWT.ERROR);
+					mb2.setText("错误提示:");
+					mb2.setMessage("密码修改失败，请保持两次密码输入一致");
+					mb2.open();
 
 
 			}
