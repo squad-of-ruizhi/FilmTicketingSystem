@@ -92,7 +92,7 @@ public class RePassword {
 					int result=adminDao.Repwd(account,repsd);
 					System.out.println(result);
 					if(result!=-1){
-						InitData.RegisterUserInfo = result;
+						InitData.RePsdInfo = result;
 						InitData.Login= new Login();
 						MessageBox mb2 = new MessageBox(shell,SWT.YES | SWT.CANCEL |SWT.ICON_WORKING);
 						mb2.setText("提示");

@@ -16,4 +16,5 @@ public class InitData {
     public static Login Login;
     public static Recall rc;
     public static RePassword rp;
+    public static int RePsdInfo;
 }

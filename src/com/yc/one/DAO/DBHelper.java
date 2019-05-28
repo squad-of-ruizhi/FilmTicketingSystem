@@ -89,7 +89,8 @@ public class DBHelper {
 		Connection con=null;
 		PreparedStatement pstmt =null;
 		int result =-1;
-		try{ con=this.getConnection();
+		try{
+			con=this.getConnection();
 			pstmt=con.prepareStatement(sql);
 			this.setValues(pstmt,params);
 			result = pstmt.executeUpdate();
