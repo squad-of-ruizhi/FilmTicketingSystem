@@ -35,7 +35,7 @@ public class AdminDao {
 		DBHelper db = new DBHelper();
 		String sql = "select cname,answer from costumer where cname=? and answer =?";
 		List<Map<String, String>> list = db.find(sql, account, answer);
-		if (list != null) {
+		if (list != null && list.size()>0) {
 			return list.get(0);
 		}
 		return null;

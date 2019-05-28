@@ -7,16 +7,11 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Rectangle;
-import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Shell;
-import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.Text;
-import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.widgets.List;
+import org.eclipse.swt.widgets.*;
 
 import java.util.Map;
 
-public class Recall { //
+public class Recall { //重置密码时的身份检测
 
 	protected Shell shell;
 	private Text text;
@@ -117,15 +112,21 @@ public class Recall { //
 			public void widgetSelected(SelectionEvent e) {
 				String name =text.getText().trim();
 				String qst=text_1.getText().trim();
-				account=name;
-				AdminDao adminDao=new AdminDao();
-				Map<String,String> map=adminDao.Check(name,qst);
-
-				if (map !=null){
-					InitData.LoginUserInfo=map;
-					InitData.rp=new RePassword();
-					shell.dispose();
-					InitData.rp.open();
+				if(name.equals("")||qst.equals("")){
+					MessageBox mb = new MessageBox(shell,SWT.YES | SWT.CANCEL |SWT.ERROR);
+					mb.setText("错误提示");
+					mb.setMessage("验证信息不能为空");
+					mb.open();
+				}else {
+					account = name;
+					AdminDao adminDao = new AdminDao();
+					Map<String, String> map = adminDao.Check(name, qst);
+					if (map != null) {
+						InitData.LoginUserInfo = map;
+						InitData.rp = new RePassword();
+						shell.dispose();
+						InitData.rp.open();
+					}
 				}
 
 			}
