@@ -25,7 +25,7 @@ public class InitData {
 	public static Map<String,String> LoginUserInfo;
 	public static Register register;
 	public static PreMainUI main;
-	public static com.yc.one.UI.Login Login;
+	public static Login Login;
 	public static int RegisterUserInfo;
 	public static Recall rc;
 	public static RePassword rp;

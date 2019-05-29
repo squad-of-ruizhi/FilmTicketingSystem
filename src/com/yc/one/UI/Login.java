@@ -1,7 +1,7 @@
 package com.yc.one.UI;
 
 import com.swtdesigner.SWTResourceManager;
-import com.yc.one.UI.MainUI.MainUI;
+import com.yc.one.UI.MainUI.PreMainUI;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
@@ -217,7 +217,7 @@ public class Login {
 				System.out.println(map);
 				 if(map != null){
 					InitData.LoginUserInfo = map;
-					InitData.main= new MainUI();
+					InitData.main= new PreMainUI();
 					shell.dispose();
 //					main.open(map.get("aname"));
 					InitData.main.open();
