@@ -1,5 +1,7 @@
 package com.yc.one.UI.MainUI;
 
+import com.yc.one.UI.Login;
+import com.yc.one.Util.InitData;
 import org.eclipse.swt.events.MouseAdapter;
 import org.eclipse.swt.events.MouseEvent;
 import org.eclipse.swt.events.MouseMoveListener;
@@ -101,6 +103,15 @@ public class MainUI {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				com1 = new Composite1(shell, SWT.NONE);
+			}
+		});
+
+		button_1.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				shell.dispose();
+				InitData.Login=new Login();
+				InitData.Login.open();
 			}
 		});
 		
