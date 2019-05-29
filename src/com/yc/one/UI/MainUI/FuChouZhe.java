@@ -11,7 +11,6 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.TableItem;
 
-
 public class FuChouZhe extends Composite {
 		private Table table;
 	/**

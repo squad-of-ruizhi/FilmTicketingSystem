@@ -11,6 +11,7 @@ import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.custom.SashForm;
+import org.eclipse.swt.custom.StackLayout;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
 import org.eclipse.swt.widgets.TreeItem;
@@ -151,6 +152,7 @@ public class PreMainUI {
 		trtmNewTreeitem_5.setText("19：00");
 		
 		Composite composite_1 = new Composite(sashForm, SWT.NONE);
+		composite_1.setLayout(InitData.stackLayout);
 		composite_1.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		sashForm.setWeights(new int[] {212, 910});
 		
@@ -158,18 +160,21 @@ public class PreMainUI {
 		tree.addSelectionListener(new SelectionAdapter() { // 当点击树上的某个节点时
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				TreeItem ti = (TreeItem) e.item;
+				TreeItem ti = (TreeItem)e.item;
 				String tname = ti.getText().trim();
 				
 				//先去composite_1下面所有的面板
 				if("大侦探皮卡丘".equals(tname)){
+					
 					if(InitData.dazhentan == null){
+						System.out.println("111");
 						InitData.dazhentan = new DaZhenTan(composite_1,SWT.NONE);
 					}
 					fi = new DaZhenTan(composite_1,SWT.NONE);
 					InitData.stackLayout.topControl = InitData.dazhentan;
 					
 				}else if("复仇者联盟：终局之战".equals(tname)){
+					System.out.println("222");
 					if(InitData.fuchouzhe == null){
 						InitData.fuchouzhe = new FuChouZhe(composite_1,SWT.NONE);
 					}
@@ -183,11 +188,11 @@ public class PreMainUI {
 		
 
 	}
-	public void add(){
-		if(InitData.fuchouzhe == null){
-			InitData.fuchouzhe = new FuChouZhe(composite_1,SWT.NONE);
-		}
-		InitData.stackLayout.topControl = InitData.fuchouzhe;
-		composite_1.layout(); //刷新界面
-	}
+//	public void add(){
+//		if(InitData.fuchouzhe == null){
+//			InitData.fuchouzhe = new FuChouZhe(composite_1,SWT.NONE);
+//		}
+//		InitData.stackLayout.topControl = InitData.fuchouzhe;
+//		composite_1.layout(); //刷新界面
+//	}
 }
