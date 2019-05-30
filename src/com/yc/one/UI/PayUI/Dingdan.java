@@ -7,14 +7,14 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 
-public class Composite5 extends Composite {
+public class Dingdan extends Composite {
 
 	/**
 	 * Create the composite.
 	 * @param parent
 	 * @param style
 	 */
-	public Composite5(Composite parent, int style) {
+	public Dingdan(Composite parent, int style) {
 		super(parent, style);
 		
 		Label label = new Label(this, SWT.NONE);

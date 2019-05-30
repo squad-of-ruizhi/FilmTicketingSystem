@@ -198,11 +198,11 @@ public class PreMainUI {
 		
 
 	}
-//	public void add(){
-//		if(InitData.fuchouzhe == null){
-//			InitData.fuchouzhe = new FuChouZhe(composite_1,SWT.NONE);
-//		}
-//		InitData.stackLayout.topControl = InitData.fuchouzhe;
-//		composite_1.layout(); //刷新界面
-//	}
+	public void add(){
+		if(InitData.fuchouzhe == null){
+			InitData.fuchouzhe = new FuChouZhe(composite_1,SWT.NONE);
+		}
+		InitData.stackLayout.topControl = InitData.fuchouzhe;
+		composite_1.layout(); //刷新界面
+	}
 }

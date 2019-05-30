@@ -8,14 +8,14 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.custom.StyledText;
 import org.eclipse.jface.text.TextViewer;
 
-public class Composite4 extends Composite {
+public class Linshi extends Composite {
 
 	/**
 	 * Create the composite.
 	 * @param parent
 	 * @param style
 	 */
-	public Composite4(Composite parent, int style) {
+	public Linshi(Composite parent, int style) {
 		super(parent, style);
 		
 		Label label = new Label(this, SWT.NONE);
@@ -23,7 +23,7 @@ public class Composite4 extends Composite {
 		label.setText("是否需要以下观影套餐？");
 		
 		Label label_1 = new Label(this, SWT.NONE);
-		label_1.setImage(SWTResourceManager.getImage(Composite4.class, "/images/17.jpg"));
+		label_1.setImage(SWTResourceManager.getImage(Linshi.class, "/images/17.jpg"));
 		label_1.setBounds(54, 125, 100, 100);
 		
 		Label lbloz = new Label(this, SWT.NONE);
@@ -48,7 +48,7 @@ public class Composite4 extends Composite {
 		label_4.setBounds(268, 210, 34, 2);
 		
 		Label label_5 = new Label(this, SWT.NONE);
-		label_5.setImage(SWTResourceManager.getImage(Composite4.class, "/images/18.jpg"));
+		label_5.setImage(SWTResourceManager.getImage(Linshi.class, "/images/18.jpg"));
 		label_5.setBounds(54, 250, 100, 100);
 		
 		Label lblNewLabel = new Label(this, SWT.NONE);
@@ -73,7 +73,7 @@ public class Composite4 extends Composite {
 		styledText_1.setBounds(422, 269, 71, 24);
 		
 		Label lblNewLabel_1 = new Label(this, SWT.NONE);
-		lblNewLabel_1.setImage(SWTResourceManager.getImage(Composite4.class, "/images/19.jpg"));
+		lblNewLabel_1.setImage(SWTResourceManager.getImage(Linshi.class, "/images/19.jpg"));
 		lblNewLabel_1.setBounds(54, 375, 100, 100);
 		
 		Label lbloz_1 = new Label(this, SWT.NONE);
