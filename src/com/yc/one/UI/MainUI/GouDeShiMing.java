@@ -11,7 +11,6 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.TableItem;
 
-
 public class GouDeShiMing extends Composite {
 		private Table table;
 	/**
@@ -103,17 +102,17 @@ public class GouDeShiMing extends Composite {
 		
 		TextViewer textViewer = new TextViewer(this, SWT.BORDER);
 		StyledText styledText = textViewer.getTextWidget();
-		styledText.setText("0");
+		//styledText.setText("0");
 		styledText.setBounds(387, 356, 71, 24);
 		
 		TextViewer textViewer_1 = new TextViewer(this, SWT.BORDER);
 		StyledText styledText_1 = textViewer_1.getTextWidget();
-		styledText_1.setText("0");
+		//styledText_1.setText("0");
 		styledText_1.setBounds(387, 404, 71, 24);
 		
 		TextViewer textViewer_2 = new TextViewer(this, SWT.BORDER);
 		StyledText styledText_2 = textViewer_2.getTextWidget();
-		styledText_2.setText("0");
+		//styledText_2.setText("0");
 		styledText_2.setBounds(387, 454, 71, 24);
 		
 		Button button_5 = new Button(this, SWT.NONE);

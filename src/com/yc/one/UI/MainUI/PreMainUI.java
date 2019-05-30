@@ -19,8 +19,6 @@ import org.eclipse.swt.widgets.Label;
 
 
 
-
-
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -30,6 +28,7 @@ public class PreMainUI {
 	protected Shell shell;
 	protected DaZhenTan fi = null;
 	protected FuChouZhe fc = null;
+	protected GouDeShiMing gd = null;
 	private Composite composite_1;
 
 	/**
@@ -121,6 +120,7 @@ public class PreMainUI {
 		
 		TreeItem treeItem_4 = new TreeItem(treeItem, SWT.NONE);
 		treeItem_4.setText("19：00");
+		treeItem.setExpanded(true);
 		
 		TreeItem trtmNewTreeitem = new TreeItem(tree, SWT.NONE);
 		trtmNewTreeitem.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 11, SWT.BOLD));
@@ -136,6 +136,7 @@ public class PreMainUI {
 		
 		TreeItem trtmNewTreeitem_2 = new TreeItem(trtmNewTreeitem, SWT.NONE);
 		trtmNewTreeitem_2.setText("19：00");
+		trtmNewTreeitem.setExpanded(true);
 		
 		TreeItem treeItem_1 = new TreeItem(tree, SWT.NONE);
 		treeItem_1.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 11, SWT.BOLD));
@@ -150,6 +151,7 @@ public class PreMainUI {
 		
 		TreeItem trtmNewTreeitem_5 = new TreeItem(treeItem_1, SWT.NONE);
 		trtmNewTreeitem_5.setText("19：00");
+		treeItem_1.setExpanded(true);
 		
 		Composite composite_1 = new Composite(sashForm, SWT.NONE);
 		composite_1.setLayout(InitData.stackLayout);
@@ -173,13 +175,21 @@ public class PreMainUI {
 					fi = new DaZhenTan(composite_1,SWT.NONE);
 					InitData.stackLayout.topControl = InitData.dazhentan;
 					
-				}else if("复仇者联盟：终局之战".equals(tname)){
-					System.out.println("222");
+				}else if("复仇者联盟4:终局之战".equals(tname)){
+					System.out.println("333");
 					if(InitData.fuchouzhe == null){
 						InitData.fuchouzhe = new FuChouZhe(composite_1,SWT.NONE);
 					}
 					InitData.stackLayout.topControl = InitData.fuchouzhe;
 					fc = new FuChouZhe(composite_1,SWT.NONE);
+					
+				}else if("一条狗的使命2".equals(tname)){
+					System.out.println("222");
+					if(InitData.goudeshiming == null){
+						InitData.goudeshiming = new GouDeShiMing(composite_1,SWT.NONE);
+					}
+					InitData.stackLayout.topControl = InitData.goudeshiming;
+					gd = new GouDeShiMing(composite_1,SWT.NONE);
 				}
 				
 				composite_1.layout(); //刷新界面
