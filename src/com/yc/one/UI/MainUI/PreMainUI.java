@@ -1,6 +1,7 @@
 package com.yc.one.UI.MainUI;
 
 import com.swtdesigner.SWTResourceManager;
+import com.yc.one.UI.PayUI.XuanZuo;
 import com.yc.one.Util.InitData;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
@@ -18,7 +19,6 @@ import org.eclipse.swt.widgets.TreeItem;
 import org.eclipse.swt.widgets.Label;
 
 
-
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -26,23 +26,24 @@ import org.eclipse.swt.events.SelectionEvent;
 
 public class PreMainUI {
 	protected Shell shell;
+	protected XuanZuo xz = null;
 	protected DaZhenTan fi = null;
 	protected FuChouZhe fc = null;
 	protected GouDeShiMing gd = null;
 	private Composite composite_1;
 
-	/**
-	 * Launch the application.
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		try {
-			PreMainUI window = new PreMainUI();
-			window.open();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+//	/**
+//	 * Launch the application.
+//	 * @param args
+//	 */
+//	public static void main(String[] args) {
+//		try {
+//			PreMainUI window = new PreMainUI();
+//			window.open();
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//	}
 
 	/**
 	 * Open the window.
@@ -153,7 +154,9 @@ public class PreMainUI {
 		trtmNewTreeitem_5.setText("19：00");
 		treeItem_1.setExpanded(true);
 		
-		Composite composite_1 = new Composite(sashForm, SWT.NONE);
+		TreeItem treeItem_6 = new TreeItem(tree, SWT.NONE);
+		
+		composite_1 = new Composite(sashForm, SWT.NONE);
 		composite_1.setLayout(InitData.stackLayout);
 		composite_1.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		sashForm.setWeights(new int[] {212, 910});
@@ -190,19 +193,29 @@ public class PreMainUI {
 					}
 					InitData.stackLayout.topControl = InitData.goudeshiming;
 					gd = new GouDeShiMing(composite_1,SWT.NONE);
+					
+				}else if("".equals(tname)){
+					System.out.println("进入");
+					if(InitData.xuanzuo == null){
+						InitData.xuanzuo = new XuanZuo(composite_1,SWT.NONE);
+				}
+					InitData.stackLayout.topControl = InitData.xuanzuo;
+					xz = new XuanZuo(composite_1,SWT.NONE);
+				
 				}
 				
 				composite_1.layout(); //刷新界面
 			}
 		});
-		
-
 	}
-	public void add(){
-		if(InitData.fuchouzhe == null){
-			InitData.fuchouzhe = new FuChouZhe(composite_1,SWT.NONE);
+	
+	public void add(){ //选座方法
+		if(InitData.xuanzuo == null){
+			InitData.xuanzuo = new XuanZuo(composite_1,SWT.NONE);
 		}
-		InitData.stackLayout.topControl = InitData.fuchouzhe;
+		InitData.stackLayout.topControl = InitData.xuanzuo;
 		composite_1.layout(); //刷新界面
 	}
+	
+	
 }

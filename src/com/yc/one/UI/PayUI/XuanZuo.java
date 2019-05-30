@@ -7,14 +7,14 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Label;
 
 
-public class Xuanzuo extends Composite {
+public class XuanZuo extends Composite {
 
 	/**
 	 * Create the composite.
 	 * @param parent
 	 * @param style
 	 */
-	public Xuanzuo(Composite parent, int style) {
+	public XuanZuo(Composite parent, int style) {
 		super(parent, style);
 		
 		Button button = new Button(this, SWT.CHECK);

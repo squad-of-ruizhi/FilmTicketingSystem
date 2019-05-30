@@ -1,6 +1,7 @@
 package com.yc.one.UI.MainUI;
 
 import com.swtdesigner.SWTResourceManager;
+import com.yc.one.Util.InitData;
 import org.eclipse.jface.text.TextViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.StyledText;
@@ -10,6 +11,10 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.TableItem;
+
+
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 
 public class GouDeShiMing extends Composite {
 		private Table table;
@@ -116,10 +121,17 @@ public class GouDeShiMing extends Composite {
 		styledText_2.setBounds(387, 454, 71, 24);
 		
 		Button button_5 = new Button(this, SWT.NONE);
+		
 		button_5.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 9, SWT.NORMAL));
 		button_5.setBounds(476, 534, 98, 30);
 		button_5.setText("去选座");
-
+		
+		button_5.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				InitData.premain.add();
+			}
+		});
 
 	}
 

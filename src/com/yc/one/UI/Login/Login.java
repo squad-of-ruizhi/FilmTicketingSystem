@@ -217,10 +217,10 @@ public class Login {
 				System.out.println(map);
 				 if(map != null){
 					InitData.LoginUserInfo = map;
-					InitData.main= new PreMainUI();
+					InitData.premain= new PreMainUI();
 					shell.dispose();
 //					main.open(map.get("aname"));
-					InitData.main.open();
+					InitData.premain.open();
 				}else{
 //					lblNewLabel_1.setText("帐号或密码错误!");
 					MessageBox mb = new MessageBox(shell,SWT.YES | SWT.NO | SWT.CANCEL |SWT.ERROR);

@@ -5,8 +5,6 @@ import com.yc.one.Util.InitData;
 import org.eclipse.jface.text.TextViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.StyledText;
-import org.eclipse.swt.events.SelectionAdapter;
-import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
@@ -14,8 +12,15 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.TableItem;
 
+
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.layout.FillLayout;
+
 public class FuChouZhe extends Composite {
 		private Table table;
+		
+		protected Composite composite_1;
 	/**
 	 * Create the composite.
 	 * @param parent
@@ -23,6 +28,8 @@ public class FuChouZhe extends Composite {
 	 */
 	public FuChouZhe(Composite parent, int style) {
 		super(parent, style);
+		
+		
 		Label label = new Label(this, SWT.NONE);
 		label.setImage(SWTResourceManager.getImage(FuChouZhe.class, "/image/13.jpg"));
 		label.setBounds(34, 34, 132, 164);
@@ -119,18 +126,17 @@ public class FuChouZhe extends Composite {
 		styledText_2.setBounds(387, 454, 71, 24);
 		
 		Button button_5 = new Button(this, SWT.NONE);
+		
 		button_5.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 9, SWT.NORMAL));
 		button_5.setBounds(476, 534, 98, 30);
 		button_5.setText("去选座");
-
-		button_5.addSelectionListener(new SelectionAdapter() {
+		
+		button_5.addSelectionListener(new SelectionAdapter() { // 点击去选座切换的面板
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				InitData.main.add();
-			}
+				InitData.premain.add();
+			}	
 		});
-
-
 	}
 
 	@Override
