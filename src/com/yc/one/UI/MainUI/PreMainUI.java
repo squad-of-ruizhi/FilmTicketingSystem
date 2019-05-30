@@ -113,46 +113,46 @@ public class PreMainUI {
 		treeItem.setForeground(SWTResourceManager.getColor(SWT.COLOR_BLUE));
 		treeItem.setText("复仇者联盟4:终局之战");
 		
-		TreeItem treeItem_2 = new TreeItem(treeItem, SWT.NONE);
-		treeItem_2.setText("9：00");
-		
-		TreeItem treeItem_3 = new TreeItem(treeItem, SWT.NONE);
-		treeItem_3.setText("14：00");
-		
-		TreeItem treeItem_4 = new TreeItem(treeItem, SWT.NONE);
-		treeItem_4.setText("19：00");
-		treeItem.setExpanded(true);
+//		TreeItem treeItem_2 = new TreeItem(treeItem, SWT.NONE);
+//		treeItem_2.setText("9：00");
+//
+//		TreeItem treeItem_3 = new TreeItem(treeItem, SWT.NONE);
+//		treeItem_3.setText("14：00");
+//
+//		TreeItem treeItem_4 = new TreeItem(treeItem, SWT.NONE);
+//		treeItem_4.setText("19：00");
+//		treeItem.setExpanded(true);
 		
 		TreeItem trtmNewTreeitem = new TreeItem(tree, SWT.NONE);
 		trtmNewTreeitem.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 11, SWT.BOLD));
 		trtmNewTreeitem.setForeground(SWTResourceManager.getColor(SWT.COLOR_BLUE));
 		trtmNewTreeitem.setText("大侦探皮卡丘");
 		
-		TreeItem treeItem_5 = new TreeItem(trtmNewTreeitem, SWT.NONE);
-		treeItem_5.setText("9：00");
-		
-		TreeItem trtmNewTreeitem_1 = new TreeItem(trtmNewTreeitem, SWT.NONE);
-		trtmNewTreeitem_1.setText("14：00");
-		trtmNewTreeitem_1.setExpanded(true);
-		
-		TreeItem trtmNewTreeitem_2 = new TreeItem(trtmNewTreeitem, SWT.NONE);
-		trtmNewTreeitem_2.setText("19：00");
-		trtmNewTreeitem.setExpanded(true);
+//		TreeItem treeItem_5 = new TreeItem(trtmNewTreeitem, SWT.NONE);
+//		treeItem_5.setText("9：00");
+//
+//		TreeItem trtmNewTreeitem_1 = new TreeItem(trtmNewTreeitem, SWT.NONE);
+//		trtmNewTreeitem_1.setText("14：00");
+//		trtmNewTreeitem_1.setExpanded(true);
+//
+//		TreeItem trtmNewTreeitem_2 = new TreeItem(trtmNewTreeitem, SWT.NONE);
+//		trtmNewTreeitem_2.setText("19：00");
+//		trtmNewTreeitem.setExpanded(true);
 		
 		TreeItem treeItem_1 = new TreeItem(tree, SWT.NONE);
 		treeItem_1.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 11, SWT.BOLD));
 		treeItem_1.setForeground(SWTResourceManager.getColor(SWT.COLOR_BLUE));
 		treeItem_1.setText("一条狗的使命2");
 		
-		TreeItem trtmNewTreeitem_3 = new TreeItem(treeItem_1, SWT.NONE);
-		trtmNewTreeitem_3.setText("9：00");
-		
-		TreeItem trtmNewTreeitem_4 = new TreeItem(treeItem_1, SWT.NONE);
-		trtmNewTreeitem_4.setText("14：00");
-		
-		TreeItem trtmNewTreeitem_5 = new TreeItem(treeItem_1, SWT.NONE);
-		trtmNewTreeitem_5.setText("19：00");
-		treeItem_1.setExpanded(true);
+//		TreeItem trtmNewTreeitem_3 = new TreeItem(treeItem_1, SWT.NONE);
+//		trtmNewTreeitem_3.setText("9：00");
+//
+//		TreeItem trtmNewTreeitem_4 = new TreeItem(treeItem_1, SWT.NONE);
+//		trtmNewTreeitem_4.setText("14：00");
+//
+//		TreeItem trtmNewTreeitem_5 = new TreeItem(treeItem_1, SWT.NONE);
+//		trtmNewTreeitem_5.setText("19：00");
+//		treeItem_1.setExpanded(true);
 		
 		TreeItem treeItem_6 = new TreeItem(tree, SWT.NONE);
 		
