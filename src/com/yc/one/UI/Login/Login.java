@@ -1,4 +1,4 @@
-package com.yc.one.UI;
+package com.yc.one.UI.Login;
 
 import com.swtdesigner.SWTResourceManager;
 import com.yc.one.UI.MainUI.PreMainUI;

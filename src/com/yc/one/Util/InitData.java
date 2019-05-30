@@ -2,19 +2,15 @@ package com.yc.one.Util;
 
 import java.util.Map;
 
-import com.yc.one.UI.Login;
+import com.yc.one.UI.Login.Login;
 import com.yc.one.UI.MainUI.DaZhenTan;
 import com.yc.one.UI.MainUI.FuChouZhe;
 import com.yc.one.UI.MainUI.GouDeShiMing;
 import com.yc.one.UI.MainUI.PreMainUI;
-import com.yc.one.UI.RePassword;
-import com.yc.one.UI.Recall;
-import com.yc.one.UI.Register;
+import com.yc.one.UI.Login.RePassword;
+import com.yc.one.UI.Login.Recall;
+import com.yc.one.UI.Login.Register;
 import org.eclipse.swt.custom.StackLayout;
-
-
-
-import static com.sun.deploy.trace.TraceLevel.UI;
 
 
 public class InitData {
