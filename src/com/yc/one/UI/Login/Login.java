@@ -171,11 +171,12 @@ public class Login {
 		Label lblNewLabel_5 = new Label(shell, SWT.NONE);
 		lblNewLabel_5.setForeground(SWTResourceManager.getColor(SWT.COLOR_INFO_BACKGROUND));
 		lblNewLabel_5.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 14, SWT.BOLD | SWT.ITALIC));
-		lblNewLabel_5.setBounds(10, 0, 286, 42);
+		lblNewLabel_5.setBounds(10, 0, 286, 39);
 		lblNewLabel_5.setText("睿智影城欢迎您！");
 		
 		final Label lblNewLabel_6 = new Label(shell, SWT.NONE);
 		lblNewLabel_6.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 13, SWT.BOLD));
+		lblNewLabel_6.setForeground(SWTResourceManager.getColor(SWT.COLOR_INFO_BACKGROUND));
 		lblNewLabel_6.setBounds(10, 34, 236, 41);
 		
 		new Thread(){ // 线程操作
