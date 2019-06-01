@@ -1,27 +1,35 @@
 package com.yc.one.UI.Login;
 
 import com.swtdesigner.SWTResourceManager;
+import com.yc.one.Dao.AdminDao;
 import com.yc.one.UI.MainUI.PreMainUI;
+import com.yc.one.Util.InitData;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
+
+import java.util.Date;
 import java.util.Map;
+
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.MessageBox;
+
+import com.ibm.icu.text.SimpleDateFormat;
+
+
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.graphics.Rectangle;
+import org.eclipse.swt.events.MouseTrackAdapter;
 import org.eclipse.swt.events.MouseEvent;
 import org.eclipse.swt.events.MouseMoveListener;
 import org.eclipse.swt.events.MouseAdapter;
 import org.eclipse.swt.events.FocusAdapter;
 import org.eclipse.swt.events.FocusEvent;
 
-import com.yc.one.DAO.AdminDao;
-import com.yc.one.Util.InitData;
 public class Login {
 
 	protected Shell shell;
@@ -31,6 +39,7 @@ public class Login {
 	private boolean isDown = false;
 	private int clickX;
 	private int clickY;
+	
 
 	/**
 	 * Launch the application.
@@ -65,13 +74,12 @@ public class Login {
 	 */
 	protected void createContents() {
 		shell = new Shell(SWT.NONE); //无边框
+		shell.setForeground(SWTResourceManager.getColor(SWT.COLOR_BLUE));
 		shell.setEnabled(true);
 		shell.setBackgroundMode(SWT.INHERIT_DEFAULT); // 标签背景透明
-		
 		shell.setImage(SWTResourceManager.getImage(Login.class, "/image/1.jpg"));
-		shell.setSize(new Point(836, 603));
-		shell.setBackgroundImage(SWTResourceManager.getImage(Login.class, "/image/3.jpg"));
-		shell.setSize(523, 375);
+		shell.setBackgroundImage(SWTResourceManager.getImage(Login.class, "/image/『小酒馆』剑与魔法 · 旅途中的休憩时光_109951163674078407.jpg"));
+		shell.setSize(1019, 731);
 		shell.setText("睿智影城登录系统");
 		
 		shell.addMouseMoveListener(new MouseMoveListener() { // 拖动界面
@@ -82,7 +90,7 @@ public class Login {
 					int y = e.y;
 					
 					x = x - clickX;
-					y = y- clickY;
+					y = y - clickY;
 					
 					shell.setLocation(shell.getLocation().x + x,shell.getLocation().y + y);
 				}
@@ -106,38 +114,31 @@ public class Login {
 		shell.setLocation((rtl.width - shell.getSize().x) / 2,(rtl.height - shell.getSize().y) / 2);
 		
 		text = new Text(shell, SWT.BORDER);
-		text.setBounds(217, 166, 188, 26);
+		text.setBounds(377, 283, 236, 42);
 		
 		text_1 = new Text(shell, SWT.BORDER | SWT.PASSWORD);
-		text_1.setBounds(217, 198, 188, 26);
-		
-		Button btnCheckButton = new Button(shell, SWT.CHECK);
-		btnCheckButton.setBounds(217, 242, 79, 20);
-		btnCheckButton.setText("记住密码");
-		
-		Button btnCheckButton_1 = new Button(shell, SWT.CHECK);
-		btnCheckButton_1.setBounds(326, 242, 79, 20);
-		btnCheckButton_1.setText("自动登录");
+		text_1.setBounds(377, 367, 236, 42);
 		
 		Button btnNewButton = new Button(shell, SWT.NONE);
+		btnNewButton.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 9, SWT.BOLD));
 		
-		btnNewButton.setBounds(417, 164, 78, 30);
+		btnNewButton.setBounds(664, 290, 78, 30);
 		btnNewButton.setText("注册账号");
 		
 		Button btnNewButton_1 = new Button(shell, SWT.NONE);
+		btnNewButton_1.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 9, SWT.BOLD));
+		btnNewButton_1.setForeground(SWTResourceManager.getColor(SWT.COLOR_BLUE));
 		
-		btnNewButton_1.setBounds(417, 200, 78, 26);
-		btnNewButton_1.setText("忘记密码？");
-		
-		Label lblNewLabel = new Label(shell, SWT.NONE);
-		lblNewLabel.setImage(SWTResourceManager.getImage(Login.class, "/image/1.jpg"));
-		lblNewLabel.setBounds(51, 166, 109, 96);
+		btnNewButton_1.setBounds(664, 375, 78, 26);
+		btnNewButton_1.setText("找回密码");
 		
 		
 		
 		Button btnNewButton_2 = new Button(shell, SWT.NONE);
+		btnNewButton_2.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 11, SWT.BOLD));
+		btnNewButton_2.setForeground(SWTResourceManager.getColor(SWT.COLOR_BLUE));
 		btnNewButton_2.setImage(null);
-		btnNewButton_2.setBounds(217, 268, 188, 30);
+		btnNewButton_2.setBounds(377, 490, 236, 49);
 		btnNewButton_2.setText("登录");
 		
 		Label lblNewLabel_1 = new Label(shell, SWT.NONE);
@@ -149,12 +150,55 @@ public class Login {
 		lblNewLabel_2 = new Label(shell, SWT.NONE);
 		
 		lblNewLabel_2.setImage(SWTResourceManager.getImage(Login.class, "/image/btn_close_normal.png"));
-		lblNewLabel_2.setBounds(481, 0, 40, 20);
+		lblNewLabel_2.setBounds(977, 0, 40, 20);
 		
 		Label lblNewLabel_3 = new Label(shell, SWT.NONE);
 		
 		lblNewLabel_3.setImage(SWTResourceManager.getImage(Login.class, "/image/btn_mini_normal.png"));
-		lblNewLabel_3.setBounds(446, 0, 40, 20);
+		lblNewLabel_3.setBounds(950, 0, 40, 20);
+		
+		Label lblNewLabel = new Label(shell, SWT.NONE);
+		lblNewLabel.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 11, SWT.BOLD));
+		lblNewLabel.setBounds(291, 295, 76, 30);
+		lblNewLabel.setText("用户名");
+		
+		Label lblNewLabel_4 = new Label(shell, SWT.NONE);
+		lblNewLabel_4.setAlignment(SWT.CENTER);
+		lblNewLabel_4.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 11, SWT.BOLD));
+		lblNewLabel_4.setBounds(279, 375, 55, 31);
+		lblNewLabel_4.setText("密码");
+		
+		Label lblNewLabel_5 = new Label(shell, SWT.NONE);
+		lblNewLabel_5.setForeground(SWTResourceManager.getColor(SWT.COLOR_INFO_BACKGROUND));
+		lblNewLabel_5.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 14, SWT.BOLD | SWT.ITALIC));
+		lblNewLabel_5.setBounds(10, 0, 286, 42);
+		lblNewLabel_5.setText("睿智影城欢迎您！");
+		
+		final Label lblNewLabel_6 = new Label(shell, SWT.NONE);
+		lblNewLabel_6.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 13, SWT.BOLD));
+		lblNewLabel_6.setBounds(10, 34, 236, 41);
+		
+		new Thread(){ // 线程操作
+			public void run(){ //设置时间，格式化输出时间
+				while(true){
+					lblNewLabel_6.getDisplay().asyncExec(new Runnable(){
+						
+						@Override
+						public void run() {
+							SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+							String s = sdf.format(new Date());
+							lblNewLabel_6.setText(s); // 输出到Label 上
+							
+						}
+					});
+					try {
+						Thread.sleep(1000); //每隔一秒刷新一次
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					} 
+				}
+			}
+		}.start();
 		
 		
 //		lblNewLabel_3.addMouseTrackListener(new MouseTrackAdapter() {
@@ -238,7 +282,7 @@ public class Login {
 		btnNewButton.addSelectionListener(new SelectionAdapter() { // 注册账号
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				shell.dispose();
+//				shell.dispose();
 				InitData.register = new Register();
 				InitData.register.open();
 				
@@ -248,7 +292,7 @@ public class Login {
 		btnNewButton_1.addSelectionListener(new SelectionAdapter() { // 忘记密码
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				shell.dispose();
+//				shell.dispose();
 				InitData.rc = new Recall();
 				InitData.rc.open();
 				

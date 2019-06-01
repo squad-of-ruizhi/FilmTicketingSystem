@@ -1,4 +1,4 @@
-package com.yc.one.DAO;
+package com.yc.one.Dao;
 
 import java.sql.*;
 import java.util.ArrayList;

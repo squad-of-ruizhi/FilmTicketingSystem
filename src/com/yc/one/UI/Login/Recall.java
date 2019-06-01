@@ -1,7 +1,7 @@
 package com.yc.one.UI.Login;
 
 import com.swtdesigner.SWTResourceManager;
-import com.yc.one.DAO.AdminDao;
+import com.yc.one.Dao.AdminDao;
 import com.yc.one.Util.InitData;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
