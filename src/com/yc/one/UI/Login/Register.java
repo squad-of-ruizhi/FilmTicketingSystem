@@ -23,7 +23,7 @@ import org.eclipse.swt.events.SelectionEvent;
 
 public class Register {
 	
-	public static final int H_GAP = 20;
+	//public static final int H_GAP = 20;
 	protected Shell shell;
 	private Text text;
 	private Text text_1;
@@ -67,7 +67,7 @@ public class Register {
 	/**
 	 * Create contents of the window.
 	 */
-	protected void createContents() {
+	private void createContents() {
 		shell = new Shell(SWT.CLOSE | SWT.MIN);
 		shell.setForeground(SWTResourceManager.getColor(SWT.COLOR_RED));
 		
@@ -133,6 +133,7 @@ public class Register {
 		
 		CCombo combo = new CCombo(shell, SWT.BORDER);
 		combo.setBounds(124, 337, 68, 31);
+		combo.add("+86");
 		
 		Label lblNewLabel_2 = new Label(shell, SWT.NONE);
 		lblNewLabel_2.setForeground(SWTResourceManager.getColor(SWT.COLOR_LIST_SELECTION));
