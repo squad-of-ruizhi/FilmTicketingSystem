@@ -1,7 +1,11 @@
 package com.yc.one.UI.MainUI;
 
 import com.swtdesigner.SWTResourceManager;
+import com.yc.one.Dao.AdminDao;
 import com.yc.one.UI.Login.Login;
+import com.yc.one.UI.MovieInfo;
+import com.yc.one.Util.InitData;
+import com.yc.one.Util.InitInfo;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.MouseAdapter;
 import org.eclipse.swt.events.MouseEvent;
@@ -16,7 +20,7 @@ import org.eclipse.swt.widgets.Label;
 public class MainUI {
 
 	protected Shell shell;
-
+	private String moviename;
 	/**
 	 * Launch the application.
 	 * @param args
@@ -53,12 +57,13 @@ public class MainUI {
 		shell.setImage(SWTResourceManager.getImage(MainUI.class, "/image/『小酒馆』剑与魔法 · 旅途中的休憩时光_109951163674078407.jpg"));
 		shell.setSize(1930, 1038);
 		shell.setText("睿智影城");
+		AdminDao adminDao=new AdminDao();
 		
 		Rectangle rtl = Display.getDefault().getClientArea();
 		shell.setLocation((rtl.width - shell.getSize().x) / 2,(rtl.height - shell.getSize().y) / 2);
 		
 		Button btnNewButton = new Button(shell, SWT.NONE);
-		btnNewButton.setImage(SWTResourceManager.getImage(MainUI.class, "/image/哥斯拉副本.jpg"));
+		btnNewButton.setImage(SWTResourceManager.getImage(MainUI.class, adminDao.MovieImage("哥斯拉2：怪兽之王")));
 		btnNewButton.setBounds(36, 48, 189, 262);
 		
 		Button btnNewButton_1 = new Button(shell, SWT.NONE);
@@ -67,11 +72,11 @@ public class MainUI {
 		
 		Label lblNewLabel = new Label(shell, SWT.NONE);
 		lblNewLabel.setBounds(267, 91, 76, 20);
-		lblNewLabel.setText("评分 ： 8.5");
+		lblNewLabel.setText("评分："+adminDao.Points("哥斯拉2：怪兽之王"));
 		
 		Label lblNewLabel_1 = new Label(shell, SWT.NONE);
 		lblNewLabel_1.setBounds(263, 117, 115, 20);
-		lblNewLabel_1.setText("片长：132分钟");
+		lblNewLabel_1.setText("片长："+adminDao.MovieTime("哥斯拉2：怪兽之王"));
 		
 		Label lblNewLabel_2 = new Label(shell, SWT.NONE);
 		lblNewLabel_2.setBounds(267, 143, 76, 20);
@@ -106,5 +111,15 @@ public class MainUI {
 				btnNewButton_2.setImage(SWTResourceManager.getImage(MainUI.class,"/image/购票副本.png"));
 			}
 		});
+
+		btnNewButton_2.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				InitInfo.moviename="哥斯拉2：怪兽之王";
+				InitData.movieInfo=new MovieInfo(shell,0);
+				InitData.movieInfo.open();
+			}
+		});
 	}
+
 }

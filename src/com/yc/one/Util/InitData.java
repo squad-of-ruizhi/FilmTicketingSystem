@@ -7,6 +7,7 @@ import com.yc.one.UI.Login.RePassword;
 import com.yc.one.UI.Login.Recall;
 import com.yc.one.UI.Login.Register;
 import com.yc.one.UI.MainUI.MainUI;
+import com.yc.one.UI.MovieInfo;
 import org.eclipse.swt.custom.StackLayout;
 
 
@@ -26,4 +27,5 @@ public class InitData {
 	public static int RePsdInfo;
 
 
+	public static  MovieInfo movieInfo;
 }

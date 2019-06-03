@@ -3,10 +3,10 @@ package com.yc.one.Dao;
 
 import java.util.List;
 import java.util.Map;
-
+import com.yc.one.Dao.DBHelper;
 public class AdminDao {
 	public Map<String, String> Login(String account, String pwd) {
-		DBHelper db = new DBHelper();
+		 DBHelper db = new com.yc.one.Dao.DBHelper();
 		String sql = "select cname, pwd from costumer where cname = ? and pwd = ?";
 		List<Map<String, String>> list = db.find(sql, account, pwd);
 		if (list != null && list.size() > 0) {
@@ -50,6 +50,91 @@ public class AdminDao {
 			return result;
 		}
 		return -1;
+	}
+
+	//读取电影信息
+	public String MovieImage(String mname){  //读取海报图片
+		DBHelper dbHelper=new DBHelper();
+		String sql="select imagesource from movie where mname=?;";
+		List<Map<String, String>> list = dbHelper.find(sql,mname);
+		if (list != null && list.size()>0) {
+			String str=list.get(0).toString();
+			str=str.substring(str.indexOf("=")+1,str.lastIndexOf("}"));
+			return str;
+		}
+		return null;
+	}
+
+	public String Points(String mname){  //读取电影评分
+		DBHelper dbHelper=new DBHelper();
+		String sql="select mpoints from movie where mname=?;";
+		List<Map<String, String>> list = dbHelper.find(sql,mname);
+		if (list != null && list.size()>0) {
+			String str=list.get(0).toString();
+			str=str.substring(str.indexOf("=")+1,str.lastIndexOf("}"));
+			return str;
+		}
+		return null;
+	}
+
+	public String Direction(String mname){  //读取影片地区
+		DBHelper dbHelper=new DBHelper();
+		String sql="select direction from movie where mname=?;";
+		List<Map<String, String>> list = dbHelper.find(sql,mname);
+		if (list != null && list.size()>0) {
+			String str=list.get(0).toString();
+			str=str.substring(str.indexOf("=")+1,str.lastIndexOf("}"));
+			return str;
+		}
+		return null;
+	}
+
+	public String MovieKind(String mname){  //读取电影类型
+		DBHelper dbHelper=new DBHelper();
+		String sql="select kind from movie where mname=?;";
+		List<Map<String, String>> list = dbHelper.find(sql,mname);
+		if (list != null && list.size()>0) {
+			String str=list.get(0).toString();
+			str=str.substring(str.indexOf("=")+1,str.lastIndexOf("}"));
+			return str;
+		}
+		return null;
+	}
+
+	public String MovieActor(String mname){  //读取电影主演
+		DBHelper dbHelper=new DBHelper();
+		String sql="select actor from movie where mname=?;";
+		List<Map<String, String>> list = dbHelper.find(sql,mname);
+		if (list != null && list.size()>0) {
+			String str=list.get(0).toString();
+			str=str.substring(str.indexOf("=")+1,str.lastIndexOf("}"));
+			return str;
+		}
+		return null;
+	}
+
+	public String MovieDirector(String mname){  //读取电影导演
+		DBHelper dbHelper=new DBHelper();
+		String sql="select director from movie where mname=?;";
+		List<Map<String, String>> list = dbHelper.find(sql,mname);
+		if (list != null && list.size()>0) {
+			String str=list.get(0).toString();
+			str=str.substring(str.indexOf("=")+1,str.lastIndexOf("}"));
+			return str;
+		}
+		return null;
+	}
+
+	public String MovieTime(String mname){  //读取电影导演
+		DBHelper dbHelper=new DBHelper();
+		String sql="select time from movie where mname=?;";
+		List<Map<String, String>> list = dbHelper.find(sql,mname);
+		if (list != null && list.size()>0) {
+			String str=list.get(0).toString();
+			str=str.substring(str.indexOf("=")+1,str.lastIndexOf("}"));
+			return str;
+		}
+		return null;
 	}
 }
 

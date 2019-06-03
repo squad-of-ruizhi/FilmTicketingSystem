@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="mysql-connector-java-8.0.15">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/src/com/yc/one/DAO/mysql-connector-java-8.0.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/yc/one/Dao/mysql-connector-java-8.0.15.jar!/" />
       <root url="jar://$PROJECT_DIR$/swt_64/com.ibm.icu_54.1.1.v201501272100.jar!/" />
       <root url="jar://$PROJECT_DIR$/swt_64/org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar!/" />
       <root url="jar://$PROJECT_DIR$/swt_64/org.eclipse.ui.forms_3.6.200.v20150506-2029.jar!/" />
