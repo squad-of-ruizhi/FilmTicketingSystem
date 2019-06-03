@@ -42,6 +42,9 @@ public class Login {
 	private boolean isDown = false;
 	private int clickX;
 	private int clickY;
+
+	private static String account = null;
+	private String pwd = null;
 	
 
 	/**
@@ -70,6 +73,13 @@ public class Login {
 				display.sleep();
 			}
 		}
+	}
+
+	//获取用户名
+
+
+	public String getAccount() {
+		return account;
 	}
 
 	/**
@@ -271,9 +281,9 @@ public class Login {
 		btnNewButton_2.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				 String account = text.getText().trim();
-				 String pwd = text_1.getText().trim();
-				
+				String account = text.getText().trim();
+				String pwd = text_1.getText().trim();
+
 				AdminDao adminDao = new AdminDao();
 				Map<String,String> map = adminDao.Login(account, pwd);
 				System.out.println(map);
