@@ -45,12 +45,12 @@ public class MainUI3 {
 	protected void createContents() {
 		shell = new Shell();
 		shell.setBackgroundMode(SWT.INHERIT_DEFAULT);
-		shell.setBackgroundImage(SWTResourceManager.getImage(MainUI3.class, "/images/13.jpg"));
+		shell.setBackgroundImage(SWTResourceManager.getImage(MainUI3.class, "/image/白背景.jpg"));
 		shell.setSize(1920, 1080);
 		shell.setText("SWT Application");
 		
 		Label label = new Label(shell, SWT.NONE);
-		label.setImage(SWTResourceManager.getImage(MainUI3.class, "/images/14.jpg"));
+		label.setImage(SWTResourceManager.getImage(MainUI3.class, "/image/皮卡丘.jpg"));
 		label.setBounds(333, 30, 300, 412);
 		
 		Label label_1 = new Label(shell, SWT.NONE);
@@ -108,7 +108,7 @@ public class MainUI3 {
 		label_11.setText("购票/排期");
 		
 		Label label_10 = new Label(shell, SWT.NONE);
-		label_10.setImage(SWTResourceManager.getImage(MainUI3.class, "/images/蓝.png"));
+		label_10.setImage(SWTResourceManager.getImage(MainUI3.class, "/image/蓝.png"));
 		label_10.setBounds(333, 576, 110, 8);
 		
 		Label label_12 = new Label(shell, SWT.NONE);
@@ -127,7 +127,7 @@ public class MainUI3 {
 		label_14.setText("排期： \t 10:00\t11:20\t11:40\t13:25\t14:20\t15:30\t16:05\t17:35\t18:40\r\n         \t 19:40\t20:30\t21:45");
 		
 		Button button = new Button(shell, SWT.NONE);
-		button.setImage(SWTResourceManager.getImage(MainUI3.class, "/images/购票.png"));
+		button.setImage(SWTResourceManager.getImage(MainUI3.class, "/image/购票.png"));
 		button.setBounds(1474, 684, 124, 26);
 
 	}
