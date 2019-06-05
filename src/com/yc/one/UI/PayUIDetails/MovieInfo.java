@@ -1,4 +1,4 @@
-package com.yc.one.UI;
+package com.yc.one.UI.PayUIDetails;
 
 import com.swtdesigner.SWTResourceManager;
 import com.yc.one.Dao.AdminDao;

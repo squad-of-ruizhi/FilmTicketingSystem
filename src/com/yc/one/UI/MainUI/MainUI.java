@@ -2,8 +2,7 @@ package com.yc.one.UI.MainUI;
 
 import com.swtdesigner.SWTResourceManager;
 import com.yc.one.Dao.AdminDao;
-import com.yc.one.UI.Login.Login;
-import com.yc.one.UI.MovieInfo;
+import com.yc.one.UI.PayUIDetails.MovieInfo;
 import com.yc.one.Util.InitData;
 import com.yc.one.Util.InitInfo;
 import org.eclipse.swt.SWT;
@@ -108,7 +107,7 @@ public class MainUI {
 
 			@Override
 			public void mouseUp(MouseEvent e) {
-				btnNewButton_2.setImage(SWTResourceManager.getImage(MainUI.class,"/image/购票副本.png"));
+				btnNewButton_2.setImage(SWTResourceManager.getImage(MainUI.class,"/image/购票副本  .png"));
 			}
 		});
 
