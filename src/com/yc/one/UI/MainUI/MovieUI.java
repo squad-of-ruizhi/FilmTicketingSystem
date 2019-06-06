@@ -1,6 +1,7 @@
 package com.yc.one.UI.MainUI;
 
 import com.swtdesigner.SWTResourceManager;
+import com.yc.one.UI.Login.Login;
 import com.yc.one.Util.InitData;
 import com.yc.one.Util.InitInfo;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -53,7 +54,8 @@ public class MovieUI {
 		shell.setBackgroundMode(SWT.INHERIT_DEFAULT);
 		shell.setBackgroundImage(SWTResourceManager.getImage(MovieUI.class, "/image/白背景.jpg"));
 		shell.setSize(1920, 1080);
-		shell.setText("SWT Application");
+		shell.setImage(SWTResourceManager.getImage(Login.class, "/image/『小酒馆』剑与魔法 · 旅途中的休憩时光_109951163674078407.jpg"));
+		shell.setText("近期热门电影");
 		
 		Button button = new Button(shell, SWT.NONE);
 		button.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/哥斯拉.jpg"));

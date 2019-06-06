@@ -58,7 +58,7 @@ public class WelcomeUI {
 		shell = new Shell(SWT.NONE | SWT.CLOSE | SWT.MIN | SWT.INHERIT_DEFAULT);
 		shell.setImage(SWTResourceManager.getImage(WelcomeUI.class, "/image/『小酒馆』剑与魔法 · 旅途中的休憩时光_109951163674078407.jpg"));
 		shell.setSize(1930, 1038);
-		shell.setText("睿智影城");
+		shell.setText("欢迎"+InitInfo.account+"光临睿智影城");
 
 		AdminDao adminDao=new AdminDao();
 		

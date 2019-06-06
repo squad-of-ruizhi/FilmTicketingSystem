@@ -3,21 +3,19 @@ package com.yc.one.UI.MainUI;
 import com.swtdesigner.SWTResourceManager;
 import com.yc.one.Dao.AdminDao;
 import com.yc.one.Util.InitInfo;
-import com.yc.one.Util.MyLabel;
 import com.yc.one.Util.MySeat;
 import org.eclipse.swt.events.MouseAdapter;
 import org.eclipse.swt.events.MouseEvent;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Rectangle;
-import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.*;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.custom.SashForm;
 import org.eclipse.swt.layout.FillLayout;
-import org.eclipse.swt.widgets.Button;
 
 import java.util.*;
+import java.util.List;
 
 public class Seat {
 
@@ -128,8 +126,8 @@ public class Seat {
 		label_8.setBounds(584, 212, 120, 39);
 		label_8.setText("银幕中央");
 		Map<Label,MySeat> map = new HashMap<>();
-		for(int row=0;row<5;row++){
-			for(int col=0;col<8;col++){
+		for(int row=1;row<6;row++){
+			for(int col=1;col<9;col++){
 				Label la = new Label(composite_2, SWT.NONE);
 				la.setImage(SWTResourceManager.getImage(Seat.class, "/image/空位.png"));
 				la.setBounds(198+120*col, 338+83*row, 48, 41);
@@ -151,9 +149,12 @@ public class Seat {
 						}else{
 							l.setImage(SWTResourceManager.getImage(Seat.class, "/image/已选位.png"));
 							list.add(mseat);
+							InitInfo.seatlocation=Arrays.toString(list.toArray());
 							System.out.println(Arrays.toString(list.toArray()));
 							clicked = true;
+
 						}
+						shell.layout();
 					}
 				});
 			}
@@ -205,7 +206,7 @@ public class Seat {
 
 		Label label_16 = new Label(composite_3, SWT.NONE);
 		label_16.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 14, SWT.NORMAL));
-		label_16.setBounds(303, 116, 253, 30);
+		label_16.setBounds(303, 116, 300, 30);
 		label_16.setText("类型："+adminDao.MovieKind(InitInfo.moviename));
 
 		Label label_17 = new Label(composite_3, SWT.NONE);
@@ -236,7 +237,7 @@ public class Seat {
 		Label label_22 = new Label(composite_3, SWT.NONE);
 		label_22.setText("票价：50");
 		label_22.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 14, SWT.NORMAL));
-		label_22.setBounds(63, 498, 60, 30);
+		label_22.setBounds(63, 498, 80, 30);
 
 		Label label_20 = new Label(composite_3, SWT.NONE);
 		label_20.setForeground(SWTResourceManager.getColor(SWT.COLOR_RED));
@@ -249,12 +250,12 @@ public class Seat {
 		label_23.setBounds(50, 534, 548, 20);
 
 		Label label_24 = new Label(composite_3, SWT.NONE);
-		label_24.setText("座位："+Arrays.toString(list.toArray()));
+		label_24.setText("座位："+InitInfo.seatlocation);
 		label_24.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 14, SWT.NORMAL));
-		label_24.setBounds(63, 560, 60, 30);
+		label_24.setBounds(63, 560, 100, 40);
 
 		Label label_25 = new Label(composite_3, SWT.NONE);
-		label_25.setText("总价：");
+		//label_25.setText("总价：");
 		label_25.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 14, SWT.NORMAL));
 		label_25.setBounds(63, 641, 60, 30);
 
@@ -268,5 +269,16 @@ public class Seat {
 		sashForm_1.setWeights(new int[] {1302, 607});
 		sashForm.setWeights(new int[] {157, 883});
 
+		button_40.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				MessageBox mb = new MessageBox(shell,SWT.YES | SWT.NO | SWT.CANCEL |SWT.ICON_WORKING);
+				mb.setText("提示:");
+				mb.setMessage("购票成功");
+				mb.open();
+			}
+		});
+
 	}
+
 }

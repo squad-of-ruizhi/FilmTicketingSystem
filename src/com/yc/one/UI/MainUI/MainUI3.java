@@ -1,6 +1,7 @@
 package com.yc.one.UI.MainUI;
 
 import com.swtdesigner.SWTResourceManager;
+import com.yc.one.Dao.AdminDao;
 import com.yc.one.Util.InitData;
 import com.yc.one.Util.InitInfo;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -52,13 +53,14 @@ public class MainUI3 {
 		shell.setBackgroundMode(SWT.INHERIT_DEFAULT);
 		shell.setBackgroundImage(SWTResourceManager.getImage(MainUI3.class, "/image/白背景.jpg"));
 		shell.setSize(1960, 1040);
-		shell.setText("SWT Application");
+		shell.setText("影片信息");
 
+		AdminDao adminDao=new AdminDao();
 		Rectangle rtl = Display.getDefault().getClientArea();
 		shell.setLocation((rtl.width - shell.getSize().x) / 2,(rtl.height - shell.getSize().y) / 2);
 		
 		Label label = new Label(shell, SWT.NONE);
-		label.setImage(SWTResourceManager.getImage(MainUI3.class, "/image/皮卡丘.jpg"));
+		label.setImage(SWTResourceManager.getImage(MainUI3.class, adminDao.MovieImage(InitInfo.moviename)));
 		label.setBounds(333, 30, 300, 412);
 		
 		Label label_1 = new Label(shell, SWT.NONE);
