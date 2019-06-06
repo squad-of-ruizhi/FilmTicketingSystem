@@ -1,6 +1,11 @@
 package com.yc.one.UI.MainUI;
 
 import com.swtdesigner.SWTResourceManager;
+import com.yc.one.Util.InitData;
+import com.yc.one.Util.InitInfo;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Label;
@@ -46,8 +51,11 @@ public class MainUI3 {
 		shell = new Shell();
 		shell.setBackgroundMode(SWT.INHERIT_DEFAULT);
 		shell.setBackgroundImage(SWTResourceManager.getImage(MainUI3.class, "/image/白背景.jpg"));
-		shell.setSize(1920, 1080);
+		shell.setSize(1960, 1040);
 		shell.setText("SWT Application");
+
+		Rectangle rtl = Display.getDefault().getClientArea();
+		shell.setLocation((rtl.width - shell.getSize().x) / 2,(rtl.height - shell.getSize().y) / 2);
 		
 		Label label = new Label(shell, SWT.NONE);
 		label.setImage(SWTResourceManager.getImage(MainUI3.class, "/image/皮卡丘.jpg"));
@@ -129,6 +137,16 @@ public class MainUI3 {
 		Button button = new Button(shell, SWT.NONE);
 		button.setImage(SWTResourceManager.getImage(MainUI3.class, "/image/购票.png"));
 		button.setBounds(1474, 684, 124, 26);
+
+		button.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				Seat seat=new Seat();
+				shell.dispose();
+				seat.open();
+
+			}
+		});
 
 	}
 }
