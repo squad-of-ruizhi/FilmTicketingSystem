@@ -65,9 +65,9 @@ public class AdminDao {
 		return null;
 	}
 
-	public String Points(String mname){  //读取电影评分
+	public String Money(String mname){  //读取用户余额
 		DBHelper dbHelper=new DBHelper();
-		String sql="select mpoints from movie where mname=?;";
+		String sql="select money from costumer where mname=?;";
 		List<Map<String, String>> list = dbHelper.find(sql,mname);
 		if (list != null && list.size()>0) {
 			String str=list.get(0).toString();

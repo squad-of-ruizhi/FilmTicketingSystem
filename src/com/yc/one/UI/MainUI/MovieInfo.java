@@ -1,7 +1,8 @@
-package com.yc.one.UI.PayUIDetails;
+package com.yc.one.UI.MainUI;
 
 import com.swtdesigner.SWTResourceManager;
 import com.yc.one.Dao.AdminDao;
+import com.yc.one.Util.InitData;
 import com.yc.one.Util.InitInfo;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Rectangle;
@@ -30,8 +31,10 @@ public class MovieInfo extends Dialog {
 	 */
 	public MovieInfo(Shell parent, int style) {
 		super(parent, style);
-		setText("SWT Dialog");
+		setText("电影详情");
 	}
+
+
 
 	/**
 	 * Open the dialog.
@@ -69,37 +72,37 @@ public class MovieInfo extends Dialog {
 		Label lblNewLabel_1 = new Label(shell, SWT.NONE);
 		lblNewLabel_1.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 13, SWT.BOLD));
 		lblNewLabel_1.setBounds(452, 34, 197, 30);
-		lblNewLabel_1.setText("哥斯拉2：怪兽之王");
+		lblNewLabel_1.setText(InitInfo.moviename);
 		
 		Label lblNewLabel_2 = new Label(shell, SWT.NONE);
 		lblNewLabel_2.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 9, SWT.BOLD));
 		lblNewLabel_2.setBounds(452, 80, 159, 20);
-		lblNewLabel_2.setText("上映时间：2019-01-18");
+		lblNewLabel_2.setText("上映时间：");
 		
 		Label lblNewLabel_3 = new Label(shell, SWT.NONE);
 		lblNewLabel_3.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 9, SWT.BOLD));
 		lblNewLabel_3.setBounds(452, 113, 145, 20);
-		lblNewLabel_3.setText("导演："+adminDao.MovieDirector("哥斯拉2：怪兽之王"));
+		lblNewLabel_3.setText("导演："+adminDao.MovieDirector(InitInfo.moviename));
 		
 		Label lblNewLabel_4 = new Label(shell, SWT.NONE);
 		lblNewLabel_4.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 9, SWT.BOLD));
 		lblNewLabel_4.setBounds(647, 113, 94, 20);
-		lblNewLabel_4.setText("地区：大陆");
+		lblNewLabel_4.setText("地区："+adminDao.Direction(InitInfo.moviename));
 		
 		Label lblNewLabel_5 = new Label(shell, SWT.NONE);
 		lblNewLabel_5.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 9, SWT.BOLD));
 		lblNewLabel_5.setBounds(452, 144, 336, 20);
-		lblNewLabel_5.setText("主演："+adminDao.MovieActor("哥斯拉2：怪兽之王"));
+		lblNewLabel_5.setText("主演："+adminDao.MovieActor(InitInfo.moviename));
 		
 		Label lblNewLabel_6 = new Label(shell, SWT.NONE);
 		lblNewLabel_6.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 9, SWT.BOLD));
 		lblNewLabel_6.setBounds(452, 170, 159, 20);
-		lblNewLabel_6.setText("类型："+adminDao.MovieKind("哥斯拉2：怪兽之王"));
+		lblNewLabel_6.setText("类型："+adminDao.MovieKind(InitInfo.moviename));
 		
 		Label lblNewLabel_7 = new Label(shell, SWT.NONE);
 		lblNewLabel_7.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 9, SWT.BOLD));
 		lblNewLabel_7.setBounds(647, 170, 124, 20);
-		lblNewLabel_7.setText("片长："+adminDao.MovieTime("哥斯拉2：怪兽之王"));
+		lblNewLabel_7.setText("片长："+adminDao.MovieTime(InitInfo.moviename));
 		
 		Label lblNewLabel_8 = new Label(shell, SWT.NONE);
 		lblNewLabel_8.setBounds(465, 222, 570, 220);
@@ -130,6 +133,14 @@ public class MovieInfo extends Dialog {
 			public void widgetSelected(SelectionEvent e) {
 				shell.dispose();
 				
+			}
+		});
+
+		btnNewButton.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				InitData.seat=new Seat();
+				InitData.seat.open();
 			}
 		});
 

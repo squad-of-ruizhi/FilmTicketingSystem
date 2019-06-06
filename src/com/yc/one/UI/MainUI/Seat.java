@@ -1,6 +1,8 @@
 package com.yc.one.UI.MainUI;
 
 import com.swtdesigner.SWTResourceManager;
+import com.yc.one.Dao.AdminDao;
+import com.yc.one.Util.InitInfo;
 import com.yc.one.Util.MyLabel;
 import com.yc.one.Util.MySeat;
 import org.eclipse.swt.events.MouseAdapter;
@@ -59,8 +61,10 @@ public class Seat {
 		shell = new Shell();
 		shell.setBackgroundImage(SWTResourceManager.getImage(Seat.class, "/image/白背景.jpg"));
 		shell.setSize(1960, 1030);
-		shell.setText("SWT Application");
+		shell.setText("选座");
 		shell.setLayout(new FillLayout(SWT.HORIZONTAL));
+
+		AdminDao adminDao=new AdminDao();
 
 		Rectangle rtl = Display.getDefault().getClientArea();
 		shell.setLocation((rtl.width - shell.getSize().x) / 2,(rtl.height - shell.getSize().y) / 2);
@@ -191,23 +195,23 @@ public class Seat {
 		composite_3.setBackgroundImage(SWTResourceManager.getImage(Seat.class, "/image/灰.png"));
 
 		Label label_14 = new Label(composite_3, SWT.NONE);
-		label_14.setImage(SWTResourceManager.getImage(Seat.class, "/image/皮卡丘.jpg"));
+		label_14.setImage(SWTResourceManager.getImage(Seat.class, adminDao.MovieImage(InitInfo.moviename)));
 		label_14.setBounds(63, 48, 188, 264);
 
 		Label label_15 = new Label(composite_3, SWT.NONE);
 		label_15.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 20, SWT.NORMAL));
 		label_15.setBounds(303, 48, 198, 43);
-		label_15.setText("大侦探皮卡丘");
+		label_15.setText(InitInfo.moviename);
 
 		Label label_16 = new Label(composite_3, SWT.NONE);
 		label_16.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 14, SWT.NORMAL));
 		label_16.setBounds(303, 116, 253, 30);
-		label_16.setText("类型：冒险，奇幻，喜剧");
+		label_16.setText("类型："+adminDao.MovieKind(InitInfo.moviename));
 
 		Label label_17 = new Label(composite_3, SWT.NONE);
 		label_17.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 14, SWT.NORMAL));
 		label_17.setBounds(303, 163, 154, 30);
-		label_17.setText("时长：104分钟");
+		label_17.setText("时长："+adminDao.MovieTime(InitInfo.moviename));
 
 		Label label_18 = new Label(composite_3, SWT.NONE);
 		label_18.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 14, SWT.NORMAL));
@@ -225,12 +229,12 @@ public class Seat {
 		lbld.setBounds(63, 408, 292, 30);
 
 		Label label_21 = new Label(composite_3, SWT.NONE);
-		label_21.setText("场次：");
+		label_21.setText("场次：01");
 		label_21.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 14, SWT.NORMAL));
 		label_21.setBounds(60, 451, 69, 30);
 
 		Label label_22 = new Label(composite_3, SWT.NONE);
-		label_22.setText("票价：");
+		label_22.setText("票价：50");
 		label_22.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 14, SWT.NORMAL));
 		label_22.setBounds(63, 498, 60, 30);
 
@@ -245,7 +249,7 @@ public class Seat {
 		label_23.setBounds(50, 534, 548, 20);
 
 		Label label_24 = new Label(composite_3, SWT.NONE);
-		label_24.setText("座位：");
+		label_24.setText("座位："+Arrays.toString(list.toArray()));
 		label_24.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 14, SWT.NORMAL));
 		label_24.setBounds(63, 560, 60, 30);
 

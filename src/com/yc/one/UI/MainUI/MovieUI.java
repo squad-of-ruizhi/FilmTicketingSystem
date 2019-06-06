@@ -1,6 +1,10 @@
 package com.yc.one.UI.MainUI;
 
 import com.swtdesigner.SWTResourceManager;
+import com.yc.one.Util.InitData;
+import com.yc.one.Util.InitInfo;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Label;
@@ -8,7 +12,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Text;
 
-public class MainUI2 {
+public class MovieUI {
 
 	protected Shell shell;
 	private Text text;
@@ -19,7 +23,7 @@ public class MainUI2 {
 	 */
 	public static void main(String[] args) {
 		try {
-			MainUI2 window = new MainUI2();
+			MovieUI window = new MovieUI();
 			window.open();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -47,12 +51,12 @@ public class MainUI2 {
 	protected void createContents() {
 		shell = new Shell();
 		shell.setBackgroundMode(SWT.INHERIT_DEFAULT);
-		shell.setBackgroundImage(SWTResourceManager.getImage(MainUI2.class, "/image/白背景.jpg"));
+		shell.setBackgroundImage(SWTResourceManager.getImage(MovieUI.class, "/image/白背景.jpg"));
 		shell.setSize(1920, 1080);
 		shell.setText("SWT Application");
 		
 		Button button = new Button(shell, SWT.NONE);
-		button.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/哥斯拉.jpg"));
+		button.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/哥斯拉.jpg"));
 		button.setBounds(26, 150, 188, 263);
 		
 		Button button_1 = new Button(shell, SWT.NONE);
@@ -80,11 +84,20 @@ public class MainUI2 {
 		label_4.setText("主演：凯尔·钱德勒/维拉·法梅..");
 		
 		Button button_2 = new Button(shell, SWT.NONE);
-		button_2.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/购票副本.png"));
+		button_2.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/购票副本.png"));
 		button_2.setBounds(246, 368, 176, 45);
+
+		button_2.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				InitInfo.moviename="哥斯拉2:怪兽之王";
+				InitData.movieInfo=new MovieInfo(shell,0);
+				InitData.movieInfo.open();
+			}
+		});
 		
 		Button button_3 = new Button(shell, SWT.NONE);
-		button_3.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/皮卡丘.jpg"));
+		button_3.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/皮卡丘.jpg"));
 		button_3.setBounds(504, 150, 188, 263);
 		
 		Button button_4 = new Button(shell, SWT.NONE);
@@ -92,8 +105,17 @@ public class MainUI2 {
 		button_4.setText("大侦探皮卡丘");
 		
 		Button button_5 = new Button(shell, SWT.NONE);
-		button_5.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/购票副本.png"));
+		button_5.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/购票副本.png"));
 		button_5.setBounds(729, 368, 176, 45);
+
+		button_5.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				InitInfo.moviename="大侦探皮卡丘";
+				InitData.movieInfo=new MovieInfo(shell,0);
+				InitData.movieInfo.open();
+			}
+		});
 		
 		Label label_5 = new Label(shell, SWT.NONE);
 		label_5.setBounds(729, 219, 110, 20);
@@ -116,7 +138,7 @@ public class MainUI2 {
 		label_9.setText("主演：瑞安·雷诺兹/贾斯蒂斯..");
 		
 		Button button_6 = new Button(shell, SWT.NONE);
-		button_6.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/何以为家.jpg"));
+		button_6.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/何以为家.jpg"));
 		button_6.setBounds(969, 150, 188, 263);
 		
 		Button button_7 = new Button(shell, SWT.NONE);
@@ -144,11 +166,20 @@ public class MainUI2 {
 		label_12.setText("主演：赞恩·阿尔·拉菲亚/约丹..");
 		
 		Button button_8 = new Button(shell, SWT.NONE);
-		button_8.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/购票副本.png"));
+		button_8.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/购票副本.png"));
 		button_8.setBounds(1190, 368, 176, 45);
+
+		button_8.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				InitInfo.moviename="何以为家";
+				InitData.movieInfo=new MovieInfo(shell,0);
+				InitData.movieInfo.open();
+			}
+		});
 		
 		Button button_9 = new Button(shell, SWT.NONE);
-		button_9.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/阿拉丁.jpg"));
+		button_9.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/阿拉丁.jpg"));
 		button_9.setBounds(1430, 150, 188, 263);
 		
 		Button button_10 = new Button(shell, SWT.NONE);
@@ -176,11 +207,20 @@ public class MainUI2 {
 		label_17.setText("主演：梅纳·玛索德/娜奥米·斯..");
 		
 		Button button_11 = new Button(shell, SWT.NONE);
-		button_11.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/购票副本.png"));
+		button_11.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/购票副本.png"));
 		button_11.setBounds(1646, 368, 176, 45);
+
+		button_11.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				InitInfo.moviename="阿拉丁";
+				InitData.movieInfo=new MovieInfo(shell,0);
+				InitData.movieInfo.open();
+			}
+		});
 		
 		Button button_12 = new Button(shell, SWT.NONE);
-		button_12.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/五月天.jpg"));
+		button_12.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/五月天.jpg"));
 		button_12.setBounds(26, 449, 188, 263);
 		
 		Button button_13 = new Button(shell, SWT.NONE);
@@ -208,11 +248,20 @@ public class MainUI2 {
 		label_22.setText("主演：温尚翊/石锦航/蔡升晏");
 		
 		Button button_14 = new Button(shell, SWT.NONE);
-		button_14.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/购票副本.png"));
+		button_14.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/购票副本.png"));
 		button_14.setBounds(246, 667, 176, 45);
+
+		button_14.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				InitInfo.moviename="五月天人生无限公司";
+				InitData.movieInfo=new MovieInfo(shell,0);
+				InitData.movieInfo.open();
+			}
+		});
 		
 		Button button_15 = new Button(shell, SWT.NONE);
-		button_15.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/一条狗的使命.jpg"));
+		button_15.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/一条狗的使命.jpg"));
 		button_15.setBounds(504, 449, 188, 263);
 		
 		Button button_16 = new Button(shell, SWT.NONE);
@@ -240,11 +289,20 @@ public class MainUI2 {
 		label_27.setText("主演：丹尼斯·奎德/凯瑟琳·普..");
 		
 		Button button_17 = new Button(shell, SWT.NONE);
-		button_17.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/购票副本.png"));
+		button_17.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/购票副本.png"));
 		button_17.setBounds(729, 667, 176, 45);
+
+		button_17.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				InitInfo.moviename="一条狗的使命2";
+				InitData.movieInfo=new MovieInfo(shell,0);
+				InitData.movieInfo.open();
+			}
+		});
 		
 		Button button_18 = new Button(shell, SWT.NONE);
-		button_18.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/奥特曼.jpg"));
+		button_18.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/奥特曼.jpg"));
 		button_18.setBounds(969, 449, 188, 263);
 		
 		Button button_19 = new Button(shell, SWT.NONE);
@@ -272,11 +330,20 @@ public class MainUI2 {
 		label_32.setText("主演：暂无");
 		
 		Button button_20 = new Button(shell, SWT.NONE);
-		button_20.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/购票副本.png"));
+		button_20.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/购票副本.png"));
 		button_20.setBounds(1187, 667, 176, 45);
+
+		button_20.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				InitInfo.moviename="钢铁飞龙之奥特曼崛起";
+				InitData.movieInfo=new MovieInfo(shell,0);
+				InitData.movieInfo.open();
+			}
+		});
 		
 		Button button_21 = new Button(shell, SWT.NONE);
-		button_21.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/我的影子.jpg"));
+		button_21.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/我的影子.jpg"));
 		button_21.setBounds(1430, 449, 188, 263);
 		
 		Button button_22 = new Button(shell, SWT.NONE);
@@ -304,18 +371,27 @@ public class MainUI2 {
 		label_37.setText("主演：张静初/龙品旭/黎兆丰/..");
 		
 		Button button_23 = new Button(shell, SWT.NONE);
-		button_23.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/购票副本.png"));
+		button_23.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/购票副本.png"));
 		button_23.setBounds(1646, 667, 176, 45);
+
+		button_23.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				InitInfo.moviename="我的影子在奔跑";
+				InitData.movieInfo=new MovieInfo(shell,0);
+				InitData.movieInfo.open();
+			}
+		});
 		
 		Button button_24 = new Button(shell, SWT.NONE);
-		button_24.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/米花之味.jpg"));
+		button_24.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/米花之味.jpg"));
 		button_24.setBounds(26, 752, 188, 263);
 		
 		text = new Text(shell, SWT.BORDER);
 		text.setBounds(527, 43, 695, 45);
 		
 		Button button_25 = new Button(shell, SWT.NONE);
-		button_25.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/搜索.jpg"));
+		button_25.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/搜索.jpg"));
 		button_25.setBounds(1263, 43, 100, 45);
 		
 		Button button_26 = new Button(shell, SWT.NONE);
@@ -343,11 +419,20 @@ public class MainUI2 {
 		label_42.setText("主演：英泽/叶不勒/茶艾南");
 		
 		Button button_27 = new Button(shell, SWT.NONE);
-		button_27.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/购票副本.png"));
+		button_27.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/购票副本.png"));
 		button_27.setBounds(246, 970, 176, 45);
+
+		button_27.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				InitInfo.moviename="米花之味";
+				InitData.movieInfo=new MovieInfo(shell,0);
+				InitData.movieInfo.open();
+			}
+		});
 		
 		Button button_28 = new Button(shell, SWT.NONE);
-		button_28.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/春天的马拉松.jpg"));
+		button_28.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/春天的马拉松.jpg"));
 		button_28.setBounds(504, 752, 188, 263);
 		
 		Button button_29 = new Button(shell, SWT.NONE);
@@ -375,11 +460,20 @@ public class MainUI2 {
 		label_47.setText("主演：张铎/郑昊/杨立新");
 		
 		Button button_30 = new Button(shell, SWT.NONE);
-		button_30.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/购票副本.png"));
+		button_30.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/购票副本.png"));
 		button_30.setBounds(727, 970, 176, 45);
+
+		button_30.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				InitInfo.moviename="春天的马拉松";
+				InitData.movieInfo=new MovieInfo(shell,0);
+				InitData.movieInfo.open();
+			}
+		});
 		
 		Button button_31 = new Button(shell, SWT.NONE);
-		button_31.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/旺扎的雨靴.jpg"));
+		button_31.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/旺扎的雨靴.jpg"));
 		button_31.setBounds(969, 752, 188, 263);
 		
 		Button button_32 = new Button(shell, SWT.NONE);
@@ -407,11 +501,20 @@ public class MainUI2 {
 		label_52.setText("主演：周拉多杰/金巴/才多");
 		
 		Button button_33 = new Button(shell, SWT.NONE);
-		button_33.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/购票副本.png"));
+		button_33.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/购票副本.png"));
 		button_33.setBounds(1190, 970, 176, 45);
+
+		button_33.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				InitInfo.moviename="旺扎的雨靴";
+				InitData.movieInfo=new MovieInfo(shell,0);
+				InitData.movieInfo.open();
+			}
+		});
 		
 		Button button_34 = new Button(shell, SWT.NONE);
-		button_34.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/特别追凶.jpg"));
+		button_34.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/特别追凶.jpg"));
 		button_34.setBounds(1430, 752, 188, 263);
 		
 		Button button_35 = new Button(shell, SWT.NONE);
@@ -439,8 +542,17 @@ public class MainUI2 {
 		label_57.setText("主演：周浩东/牛宝军/于心妍");
 		
 		Button button_36 = new Button(shell, SWT.NONE);
-		button_36.setImage(SWTResourceManager.getImage(MainUI2.class, "/image/购票副本.png"));
+		button_36.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/购票副本.png"));
 		button_36.setBounds(1646, 970, 176, 45);
+
+		button_36.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				InitInfo.moviename="特别追凶";
+				InitData.movieInfo=new MovieInfo(shell,0);
+				InitData.movieInfo.open();
+			}
+		});
 
 	}
 }

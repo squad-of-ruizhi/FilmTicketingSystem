@@ -2,8 +2,9 @@ package com.yc.one.UI.Login;
 
 import com.swtdesigner.SWTResourceManager;
 import com.yc.one.Dao.AdminDao;
-import com.yc.one.UI.MainUI.MainUI;
+import com.yc.one.UI.MainUI.WelcomeUI;
 import com.yc.one.Util.InitData;
+import com.yc.one.Util.InitInfo;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
@@ -21,7 +22,6 @@ import org.eclipse.swt.widgets.MessageBox;
 import com.ibm.icu.text.SimpleDateFormat;
 
 
-import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.events.MouseTrackAdapter;
 import org.eclipse.swt.events.MouseEvent;
@@ -31,7 +31,6 @@ import org.eclipse.swt.events.FocusAdapter;
 import org.eclipse.swt.events.FocusEvent;
 import org.eclipse.swt.events.DisposeListener;
 import org.eclipse.swt.events.DisposeEvent;
-import sun.rmi.runtime.Log;
 
 public class Login {
 
@@ -289,10 +288,11 @@ public class Login {
 				System.out.println(map);
 				 if(map != null){
 					InitData.LoginUserInfo = map;
-					InitData.main= new MainUI();
+					InitData.welcome= new WelcomeUI();
+					InitInfo.account=account;  //获取用户名保留
 					shell.dispose();
 //					main.open(map.get("aname"));
-					InitData.main.open();
+					InitData.welcome.open();
 				}else{
 //					lblNewLabel_1.setText("帐号或密码错误!");
 					MessageBox mb = new MessageBox(shell,SWT.YES | SWT.NO | SWT.CANCEL |SWT.ERROR);

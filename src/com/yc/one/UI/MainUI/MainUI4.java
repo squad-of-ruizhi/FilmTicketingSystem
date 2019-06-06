@@ -48,7 +48,7 @@ public class MainUI4 {
 	protected void createContents() {
 		shell = new Shell();
 		shell.setBackgroundMode(SWT.INHERIT_DEFAULT);
-		shell.setBackgroundImage(SWTResourceManager.getImage(MainUI4.class, "/images/13.jpg"));
+		shell.setBackgroundImage(SWTResourceManager.getImage(MainUI4.class, "/image/白背景.jpg"));
 		shell.setSize(1020, 880);
 		shell.setText("SWT Application");
 		

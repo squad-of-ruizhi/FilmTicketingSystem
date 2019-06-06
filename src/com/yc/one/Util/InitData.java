@@ -6,9 +6,10 @@ import com.yc.one.UI.Login.Login;
 import com.yc.one.UI.Login.RePassword;
 import com.yc.one.UI.Login.Recall;
 import com.yc.one.UI.Login.Register;
-import com.yc.one.UI.MainUI.MainUI;
+import com.yc.one.UI.MainUI.MovieUI;
 import com.yc.one.UI.MainUI.Seat;
-import com.yc.one.UI.PayUIDetails.MovieInfo;
+import com.yc.one.UI.MainUI.WelcomeUI;
+import com.yc.one.UI.MainUI.MovieInfo;
 import org.eclipse.swt.custom.StackLayout;
 
 
@@ -19,7 +20,6 @@ public class InitData {
 	
 	public static Map<String,String> LoginUserInfo;
 	public static Register register;
-	public static MainUI main;
 	public static Login Login;
 	public static int RegisterUserInfo;
 	public static Recall rc;
@@ -30,4 +30,6 @@ public class InitData {
 
 	public static MovieInfo movieInfo;
     public static Seat seat;
+    public static MovieUI movieUI;
+	public static WelcomeUI welcome;
 }
