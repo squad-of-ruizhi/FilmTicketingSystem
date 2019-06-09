@@ -2,7 +2,6 @@ package com.yc.one.UI.MainUI;
 
 import com.swtdesigner.SWTResourceManager;
 import com.yc.one.Dao.AdminDao;
-import com.yc.one.UI.Login.Login;
 import com.yc.one.Util.InitData;
 import com.yc.one.Util.InitInfo;
 import org.eclipse.swt.SWT;
@@ -45,7 +44,6 @@ public class MovieInfo extends Dialog {
 		createContents();
 		shell.open();
 		shell.layout();
-		//shell.setBackgroundImage(SWTResourceManager.getImage(Login.class, "/image/『小酒馆』剑与魔法 · 旅途中的休憩时光_109951163674078407.jpg"));
 		Display display = getParent().getDisplay();
 		shell.setText("近期热门电影");
 		while (!shell.isDisposed()) {

@@ -21,6 +21,8 @@ public class Seat {
 
 	protected Shell shell;
 
+
+	private Label label_24;
 	/**
 	 * Launch the application.
 	 * @param args
@@ -145,12 +147,14 @@ public class Seat {
 								}
 							}
 							l.setImage(SWTResourceManager.getImage(Seat.class, "/image/空位.png"));
+							label_24.setText("座位："+InitInfo.seatlocation);
 							clicked = false;
 						}else{
 							l.setImage(SWTResourceManager.getImage(Seat.class, "/image/已选位.png"));
 							list.add(mseat);
 							InitInfo.seatlocation=Arrays.toString(list.toArray());
 							System.out.println(Arrays.toString(list.toArray()));
+							label_24.setText("座位："+InitInfo.seatlocation);
 							clicked = true;
 
 						}
@@ -249,10 +253,10 @@ public class Seat {
 		label_23.setImage(SWTResourceManager.getImage(Seat.class, "/image/分隔线.png"));
 		label_23.setBounds(50, 534, 548, 20);
 
-		Label label_24 = new Label(composite_3, SWT.NONE);
-		label_24.setText("座位："+InitInfo.seatlocation);
+		label_24 = new Label(composite_3, SWT.NONE);
+		//label_24.setText("座位："+InitInfo.seatlocation);
 		label_24.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 14, SWT.NORMAL));
-		label_24.setBounds(63, 560, 100, 40);
+		label_24.setBounds(63, 560, 300, 40);
 
 		Label label_25 = new Label(composite_3, SWT.NONE);
 		//label_25.setText("总价：");
