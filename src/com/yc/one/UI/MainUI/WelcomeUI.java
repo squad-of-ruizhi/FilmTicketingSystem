@@ -1,8 +1,10 @@
 package com.yc.one.UI.MainUI;
 
 import com.swtdesigner.SWTResourceManager;
+import com.yc.one.Dao.AdminDao;
 import com.yc.one.UI.Login.Recall;
 import com.yc.one.Util.InitData;
+import com.yc.one.Util.InitInfo;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.widgets.Display;
@@ -29,6 +31,7 @@ public class WelcomeUI {
 	private MyFilm mf = null;
 	protected Shell shell;
 	private Composite composite_4;
+
 
 	/**
 	 * Launch the application.
@@ -65,7 +68,7 @@ public class WelcomeUI {
 		shell = new Shell(SWT.NONE | SWT.CLOSE | SWT.MIN | SWT.INHERIT_DEFAULT);
 		shell.setImage(SWTResourceManager.getImage(WelcomeUI.class, "/image/『小酒馆』剑与魔法 · 旅途中的休憩时光_109951163674078407.jpg"));
 		shell.setSize(1930, 1038);
-		shell.setText("睿智影城");
+		shell.setText("欢迎"+ InitInfo.account+"光临睿智影城");
 		
 		Rectangle rtl = Display.getDefault().getClientArea();
 		shell.setLocation((rtl.width - shell.getSize().x) / 2,(rtl.height - shell.getSize().y) / 2);
@@ -184,19 +187,19 @@ public class WelcomeUI {
 		composite_4.setLayout(InitData.stackLayout);
 		composite_4.setBackgroundMode(SWT.INHERIT_DEFAULT);
 		composite_4.setBackgroundImage(SWTResourceManager.getImage(WelcomeUI.class, "/image/复联.jpg"));
-		
-		Label lblNewLabel_3 = new Label(composite_4, SWT.NONE);
+
+		/*Label lblNewLabel_3 = new Label(composite_4, SWT.BORDER);
 		lblNewLabel_3.setAlignment(SWT.CENTER);
 		lblNewLabel_3.setFont(SWTResourceManager.getFont("华文琥珀", 20, SWT.NORMAL));
-		lblNewLabel_3.setForeground(SWTResourceManager.getColor(SWT.COLOR_LIST_BACKGROUND));
+		lblNewLabel_3.setForeground(SWTResourceManager.getColor(SWT.COLOR_DARK_RED));
 		lblNewLabel_3.setBounds(94, 690, 273, 36);
-		lblNewLabel_3.setText("欢迎您，蔡徐坤！");
-		
+		lblNewLabel_3.setText("欢迎您，"+ InitInfo.account +"！");
+
 		Label lblNewLabel_4 = new Label(composite_4, SWT.NONE);
 		lblNewLabel_4.setFont(SWTResourceManager.getFont("华文琥珀", 20, SWT.NORMAL));
-		lblNewLabel_4.setForeground(SWTResourceManager.getColor(SWT.COLOR_LIST_BACKGROUND));
+		lblNewLabel_4.setForeground(SWTResourceManager.getColor(SWT.COLOR_DARK_RED));
 		lblNewLabel_4.setBounds(183, 782, 264, 34);
-		lblNewLabel_4.setText("账户余额：777￥");
+		lblNewLabel_4.setText("账户余额："+adminDao.Money(InitInfo.account)+"￥");*/
 		sashForm_1.setWeights(new int[] {118, 1803});
 		
 		Composite composite_2 = new Composite(sashForm, SWT.NONE);

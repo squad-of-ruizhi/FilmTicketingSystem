@@ -7,6 +7,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
+import org.eclipse.swt.widgets.TableItem;
 
 public class MyFilm extends Composite {
 	private Table table;
@@ -34,7 +35,7 @@ public class MyFilm extends Composite {
 		
 		TableColumn tblclmnNewColumn = new TableColumn(table, SWT.CENTER);
 		tblclmnNewColumn.setWidth(186);
-		tblclmnNewColumn.setText("           电影名称");
+		tblclmnNewColumn.setText("电影名称");
 		
 		TableColumn tblclmnNewColumn_1 = new TableColumn(table, SWT.NONE);
 		tblclmnNewColumn_1.setWidth(47);
@@ -56,6 +57,9 @@ public class MyFilm extends Composite {
 		tblclmnNewColumn_5.setWidth(172);
 		tblclmnNewColumn_5.setText("放映日期");
 		sashForm.setWeights(new int[] {76, 557});
+
+		TableItem item = new TableItem(table,SWT.NONE);
+		//item.setText(new String[] {rs.getString("FIELD1),rs.getString("FIELD2"),rs.getString("FIELD3)});
 
 	}
 

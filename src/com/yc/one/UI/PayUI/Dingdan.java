@@ -33,9 +33,9 @@ public class Dingdan extends Composite {
 		label_3.setBounds(114, 188, 53, 20);
 		label_3.setText("座位号：");
 		
-		Label label_4 = new Label(this, SWT.NONE);
+		/*Label label_4 = new Label(this, SWT.NONE);
 		label_4.setBounds(86, 289, 89, 20);
-		label_4.setText("所选套餐为：");
+		label_4.setText("所选套餐为：");*/
 		
 		Label label_5 = new Label(this, SWT.NONE);
 		label_5.setBounds(129, 332, 39, 20);
