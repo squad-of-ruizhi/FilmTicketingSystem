@@ -104,7 +104,7 @@ public class MainUI4 {
 		tblclmnNewColumn_4.setText("票务代理商");
 		
 		Button button = new Button(shell, SWT.NONE);
-		button.setImage(SWTResourceManager.getImage(MainUI4.class, "/images/购票副本.png"));
+		button.setImage(SWTResourceManager.getImage(MainUI4.class, "/image/购票副本.png"));
 		button.setBounds(824, 329, 176, 45);
 
 	}

@@ -4,26 +4,27 @@ import com.swtdesigner.SWTResourceManager;
 import com.yc.one.Dao.AdminDao;
 import com.yc.one.Util.InitData;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
-
-
-
 
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.custom.CCombo;
 import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.events.MouseMoveListener;
 import org.eclipse.swt.events.MouseEvent;
 import org.eclipse.swt.events.MouseAdapter;
+import org.eclipse.swt.events.FocusAdapter;
+import org.eclipse.swt.events.FocusEvent;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 
 public class Register {
 	
-	//public static final int H_GAP = 20;
+	public static final int H_GAP = 20;
 	protected Shell shell;
 	private Text text;
 	private Text text_1;
@@ -67,15 +68,15 @@ public class Register {
 	/**
 	 * Create contents of the window.
 	 */
-	private void createContents() {
+	protected void createContents() {
 		shell = new Shell(SWT.CLOSE | SWT.MIN);
 		shell.setForeground(SWTResourceManager.getColor(SWT.COLOR_RED));
 		
 		shell.setBackgroundMode(SWT.INHERIT_DEFAULT);
 		shell.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 10, SWT.BOLD));
-		shell.setImage(SWTResourceManager.getImage(Register.class, "/image/哥哥快给我.jpg"));
-		shell.setBackgroundImage(SWTResourceManager.getImage(Register.class, "/image/忘记密码背景.jpg"));
-		shell.setSize(511, 645);
+		shell.setImage(SWTResourceManager.getImage(Register.class, "/image/『小酒馆』剑与魔法 · 旅途中的休憩时光_109951163674078407.jpg"));
+		shell.setBackgroundImage(SWTResourceManager.getImage(Register.class, "/image/注册界面.jpg"));
+		shell.setSize(1019, 731);
 		shell.setText("注册账号");
 		
 //		shell.addMouseMoveListener(new MouseMoveListener() {
@@ -114,16 +115,18 @@ public class Register {
 		
 		text.setBounds(124, 124, 284, 31);
 		
-		text_1 = new Text(shell, SWT.BORDER);
+		text_1 = new Text(shell, SWT.BORDER | SWT.PASSWORD);
 		text_1.setBounds(124, 200, 284, 31);
 		
 		Label lblNewLabel = new Label(shell, SWT.NONE);
+		lblNewLabel.setForeground(SWTResourceManager.getColor(SWT.COLOR_INFO_BACKGROUND));
 //		lblNewLabel.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		lblNewLabel.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 13, SWT.BOLD));
-		lblNewLabel.setBounds(101, 39, 176, 31);
+		lblNewLabel.setBounds(90, 40, 176, 31);
 		lblNewLabel.setText("欢迎注册睿智账号\r\n\r\n");
 		
 		Label lblNewLabel_1 = new Label(shell, SWT.NONE);
+		lblNewLabel_1.setForeground(SWTResourceManager.getColor(SWT.COLOR_INFO_BACKGROUND));
 		lblNewLabel_1.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 9, SWT.BOLD));
 		lblNewLabel_1.setBounds(124, 77, 202, 20);
 		lblNewLabel_1.setText("每一天，乐在观影、乐于睿智");
@@ -133,13 +136,14 @@ public class Register {
 		
 		CCombo combo = new CCombo(shell, SWT.BORDER);
 		combo.setBounds(124, 337, 68, 31);
-		combo.add("+86");
+		combo.setText("+86");
+		combo.add("+1");
 		
 		Label lblNewLabel_2 = new Label(shell, SWT.NONE);
 		lblNewLabel_2.setForeground(SWTResourceManager.getColor(SWT.COLOR_LIST_SELECTION));
 		lblNewLabel_2.setAlignment(SWT.CENTER);
 		lblNewLabel_2.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 15, SWT.BOLD));
-		lblNewLabel_2.setBounds(42, 117, 76, 45);
+		lblNewLabel_2.setBounds(42, 122, 76, 45);
 		lblNewLabel_2.setText("昵称");
 		
 		Label lblNewLabel_3 = new Label(shell, SWT.NONE);
@@ -153,7 +157,7 @@ public class Register {
 		lblNewLabel_4.setForeground(SWTResourceManager.getColor(SWT.COLOR_LIST_SELECTION));
 		lblNewLabel_4.setAlignment(SWT.CENTER);
 		lblNewLabel_4.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 15, SWT.BOLD));
-		lblNewLabel_4.setBounds(10, 330, 108, 45);
+		lblNewLabel_4.setBounds(10, 335, 108, 45);
 		lblNewLabel_4.setText("手机号码");
 		
 		Button btnNewButton = new Button(shell, SWT.NONE);
@@ -169,13 +173,13 @@ public class Register {
 		btnCheckButton.setBounds(124, 561, 276, 20);
 		btnCheckButton.setText("我已同意睿智影城服务协议");
 		
-		text_2 = new Text(shell, SWT.BORDER);
+		text_2 = new Text(shell, SWT.BORDER | SWT.PASSWORD);
 		text_2.setBounds(124, 267, 284, 31);
 		
 		Label lblNewLabel_5 = new Label(shell, SWT.NONE);
 		lblNewLabel_5.setForeground(SWTResourceManager.getColor(SWT.COLOR_LIST_SELECTION));
 		lblNewLabel_5.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 15, SWT.BOLD));
-		lblNewLabel_5.setBounds(10, 260, 108, 39);
+		lblNewLabel_5.setBounds(10, 265, 108, 39);
 		lblNewLabel_5.setText("确认密码");
 		
 		Label lblNewLabel_7 = new Label(shell, SWT.NONE);
@@ -236,10 +240,10 @@ public class Register {
 					String tel=text_3.getText().trim();
 					String qst=text_4.getText().trim();
 
-					AdminDao adminDao=new AdminDao();
-					int result =adminDao.Register(name,pwd,tel,qst);
+					AdminDao adminDao = new AdminDao();
+					int result = adminDao.Register(name,pwd,tel,qst);
 					System.out.println(result);
-					if(result!=-1){
+					if(result!= -1){
 						InitData.RegisterUserInfo = result;
 						InitData.Login= new Login();
 						MessageBox mb2 = new MessageBox(shell,SWT.YES | SWT.NO | SWT.CANCEL |SWT.ICON_WORKING);
@@ -247,7 +251,7 @@ public class Register {
 						mb2.setMessage("注册成功，请登录");
 						mb2.open();
 						shell.dispose();
-						InitData.Login.open();
+						//InitData.Login.open();
 					}else{
 	//
 						MessageBox mb = new MessageBox(shell,SWT.YES | SWT.NO | SWT.CANCEL |SWT.ERROR);

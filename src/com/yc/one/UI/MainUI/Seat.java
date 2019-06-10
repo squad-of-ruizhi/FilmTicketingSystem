@@ -17,12 +17,15 @@ import org.eclipse.swt.layout.FillLayout;
 import java.util.*;
 import java.util.List;
 
+import static com.yc.one.Util.InitInfo.price;
+
 public class Seat {
 
 	protected Shell shell;
 
-
+	private int price=0;
 	private Label label_24;
+	private Label label_25;
 	/**
 	 * Launch the application.
 	 * @param args
@@ -144,11 +147,15 @@ public class Seat {
 							for (int a=0;a<list.size();a++){
 								if(mseat.getX()==list.get(a).getX()&&list.get(a).getY()==mseat.getY()){
 									list.remove(a);
+
 								}
 							}
 							l.setImage(SWTResourceManager.getImage(Seat.class, "/image/空位.png"));
 							label_24.setText("座位："+InitInfo.seatlocation);
 							clicked = false;
+							price=price-50;
+							System.out.println(price);
+							label_25.setText("总价："+price+"元");
 						}else{
 							l.setImage(SWTResourceManager.getImage(Seat.class, "/image/已选位.png"));
 							list.add(mseat);
@@ -156,7 +163,9 @@ public class Seat {
 							System.out.println(Arrays.toString(list.toArray()));
 							label_24.setText("座位："+InitInfo.seatlocation);
 							clicked = true;
-
+							price=price+50;
+							System.out.println(price);
+							label_25.setText("总价："+price+"元");
 						}
 						shell.layout();
 					}
@@ -236,12 +245,12 @@ public class Seat {
 		Label label_21 = new Label(composite_3, SWT.NONE);
 		label_21.setText("场次：01");
 		label_21.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 14, SWT.NORMAL));
-		label_21.setBounds(60, 451, 69, 30);
+		label_21.setBounds(60, 451, 100, 30);
 
 		Label label_22 = new Label(composite_3, SWT.NONE);
-		label_22.setText("票价：50");
+		label_22.setText("票价：50/张");
 		label_22.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 14, SWT.NORMAL));
-		label_22.setBounds(63, 498, 80, 30);
+		label_22.setBounds(63, 498, 150, 30);
 
 		Label label_20 = new Label(composite_3, SWT.NONE);
 		label_20.setForeground(SWTResourceManager.getColor(SWT.COLOR_RED));
@@ -258,10 +267,10 @@ public class Seat {
 		label_24.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 14, SWT.NORMAL));
 		label_24.setBounds(63, 560, 300, 40);
 
-		Label label_25 = new Label(composite_3, SWT.NONE);
-		//label_25.setText("总价：");
+		label_25 = new Label(composite_3, SWT.NONE);
+		//label_25.setText("总价："+price+"元");
 		label_25.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 14, SWT.NORMAL));
-		label_25.setBounds(63, 641, 60, 30);
+		label_25.setBounds(63, 641, 150, 30);
 
 		Label label_26 = new Label(composite_3, SWT.NONE);
 		label_26.setImage(SWTResourceManager.getImage(Seat.class, "/image/分隔线.png"));

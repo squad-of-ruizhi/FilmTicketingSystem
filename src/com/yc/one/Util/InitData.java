@@ -6,10 +6,7 @@ import com.yc.one.UI.Login.Login;
 import com.yc.one.UI.Login.RePassword;
 import com.yc.one.UI.Login.Recall;
 import com.yc.one.UI.Login.Register;
-import com.yc.one.UI.MainUI.MovieInfo;
-import com.yc.one.UI.MainUI.MovieUI;
-import com.yc.one.UI.MainUI.Seat;
-import com.yc.one.UI.MainUI.WelcomeUI;
+import com.yc.one.UI.MainUI.*;
 import org.eclipse.swt.custom.StackLayout;
 
 
@@ -32,4 +29,6 @@ public class InitData {
     public static Seat seat;
     public static MovieUI movieUI;
 	public static WelcomeUI welcome;
+	public static MyFilm myFilm;
+	public static IndexUI indexUI;
 }
