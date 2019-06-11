@@ -285,9 +285,10 @@ public class Seat {
 		button_40.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
+				adminDao.OrderUpdate(InitInfo.account,InitInfo.moviename,price,InitInfo.seatlocation,price/50);
 				MessageBox mb = new MessageBox(shell,SWT.YES | SWT.NO | SWT.CANCEL |SWT.ICON_WORKING);
 				mb.setText("提示:");
-				mb.setMessage("购票成功");
+				mb.setMessage("购票成功,请到前台领取票据！");
 				mb.open();
 			}
 		});

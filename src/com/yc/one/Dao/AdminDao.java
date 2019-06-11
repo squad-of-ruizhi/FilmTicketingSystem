@@ -138,7 +138,7 @@ public class AdminDao {
 	}
 
 	//订单信息存储
-	public int OrderUpdate(String cname ,String mname,String price,String seatlocation,int count ){
+	public int OrderUpdate(String cname ,String mname,int price,String seatlocation,int count ){
 		DBHelper dbHelper=new DBHelper();
 		String sql="INSERT INTO myfilm (cname,mname,price,seatlocation,hall,count) VALUES (?,?,?,?,01,?);";
 		int result = dbHelper.update(sql, cname,mname,price,seatlocation,count);
@@ -146,6 +146,16 @@ public class AdminDao {
 			return result;
 		}
 		return -1;
+	}
+
+	public String OrderOut(String cname){
+		DBHelper dbHelper=new DBHelper();
+		String sql="select * from myfilm where cname=?;";
+		List<Map<String, String>> list = dbHelper.find(sql,cname);
+		if (list != null && list.size() > 0) {
+			return list.toString();
+		}
+		return null;
 	}
 }
 

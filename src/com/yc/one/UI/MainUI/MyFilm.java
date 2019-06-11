@@ -1,6 +1,8 @@
 package com.yc.one.UI.MainUI;
 
 import com.swtdesigner.SWTResourceManager;
+import com.yc.one.Dao.AdminDao;
+import com.yc.one.Util.InitInfo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.custom.SashForm;
 import org.eclipse.swt.SWT;
@@ -20,6 +22,8 @@ public class MyFilm extends Composite {
 	public MyFilm(Composite parent, int style) {
 		super(parent, style);
 		setLayout(new FillLayout(SWT.HORIZONTAL));
+
+		AdminDao adminDao=new AdminDao();
 		
 		SashForm sashForm = new SashForm(this, SWT.VERTICAL);
 		
@@ -58,9 +62,10 @@ public class MyFilm extends Composite {
 		tblclmnNewColumn_5.setText("放映日期");
 		sashForm.setWeights(new int[] {76, 557});
 
+		//订单信息导出
 		TableItem item = new TableItem(table,SWT.NONE);
 		item = new TableItem(table, SWT.NONE);
-		//item.setText();
+		item.setText(adminDao.OrderOut(InitInfo.account));
 		//item.setText(new String[] {rs.getString("FIELD1),rs.getString("FIELD2"),rs.getString("FIELD3)});
 
 	}
