@@ -136,5 +136,16 @@ public class AdminDao {
 		}
 		return null;
 	}
+
+	//订单信息存储
+	public int OrderUpdate(String cname ,String mname,String price,String seatlocation,int count ){
+		DBHelper dbHelper=new DBHelper();
+		String sql="INSERT INTO myfilm (cname,mname,price,seatlocation,hall,count) VALUES (?,?,?,?,01,?);";
+		int result = dbHelper.update(sql, cname,mname,price,seatlocation,count);
+		if (result != -1) {
+			return result;
+		}
+		return -1;
+	}
 }
 

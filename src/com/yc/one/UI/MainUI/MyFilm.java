@@ -59,6 +59,8 @@ public class MyFilm extends Composite {
 		sashForm.setWeights(new int[] {76, 557});
 
 		TableItem item = new TableItem(table,SWT.NONE);
+		item = new TableItem(table, SWT.NONE);
+		//item.setText();
 		//item.setText(new String[] {rs.getString("FIELD1),rs.getString("FIELD2"),rs.getString("FIELD3)});
 
 	}
