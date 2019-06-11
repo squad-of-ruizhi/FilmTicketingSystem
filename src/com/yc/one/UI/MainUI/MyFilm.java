@@ -47,7 +47,7 @@ public class MyFilm extends Composite {
 		
 		TableColumn tblclmnNewColumn_3 = new TableColumn(table, SWT.NONE);
 		tblclmnNewColumn_3.setWidth(137);
-		tblclmnNewColumn_3.setText("       放映地点");
+		tblclmnNewColumn_3.setText("放映地点");
 		
 		TableColumn tblclmnNewColumn_4 = new TableColumn(table, SWT.NONE);
 		tblclmnNewColumn_4.setWidth(236);
