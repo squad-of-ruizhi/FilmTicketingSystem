@@ -148,12 +148,14 @@ public class AdminDao {
 		return -1;
 	}
 
-	public String OrderOut(String cname){
+	//订单信息输出
+	public String[] OrderOut(String cname){
 		DBHelper dbHelper=new DBHelper();
 		String sql="select * from myfilm where cname=?;";
-		List<Map<String, String>> list = dbHelper.find(sql,cname);
+		List list = dbHelper.find(sql,cname);
 		if (list != null && list.size() > 0) {
-			return list.toString();
+			String[] strArray=new String[list.size()];
+			return strArray;
 		}
 		return null;
 	}
