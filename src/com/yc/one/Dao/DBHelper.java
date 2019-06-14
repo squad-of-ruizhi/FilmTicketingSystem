@@ -151,11 +151,10 @@ public class DBHelper {
 	 * @param params
 	 * @return
 	 */
-	public int getTotal(String sql, Object ... params){
+	public String getTotal(String sql, Object ... params){
 		Connection con=null;
 		PreparedStatement pstmt=null;
 		ResultSet rs=null;
-		int result =0;
 
 		try{
 			con=this.getConnection();
@@ -163,13 +162,14 @@ public class DBHelper {
 			this.setValues(pstmt,params);
 			rs=pstmt.executeQuery();
 			if (rs.next()){
-				result =rs.getInt(1);
+				return rs.toString();
 			}
 		}catch(SQLException e){
 			e.printStackTrace();
 		}
-		return result;
+		return null ;
 	}
+
 
 
 }

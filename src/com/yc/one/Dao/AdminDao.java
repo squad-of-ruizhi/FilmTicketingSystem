@@ -152,9 +152,10 @@ public class AdminDao {
 	public String[] OrderOut(String cname){
 		DBHelper dbHelper=new DBHelper();
 		String sql="select * from myfilm where cname=?;";
-		List list = dbHelper.find(sql,cname);
-		if (list != null && list.size() > 0) {
-			String[] strArray=new String[list.size()];
+		String str = dbHelper.getTotal(sql,cname);
+		if (str != null) {
+			  String[] strArray=str.split(",");
+			System.out.println(str);
 			return strArray;
 		}
 		return null;
