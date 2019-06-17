@@ -14,6 +14,11 @@ import org.eclipse.swt.widgets.TableItem;
 public class MyFilm extends Composite {
 	private Table table;
 
+	public MyFilm(Composite parent, int style, Table table) {
+		super(parent, style);
+		this.table = table;
+	}
+
 	/**
 	 * Create the composite.
 	 * @param parent
@@ -65,7 +70,7 @@ public class MyFilm extends Composite {
 		//订单信息导出
 		TableItem item = new TableItem(table,SWT.NONE);
 		item = new TableItem(table, SWT.NONE);
-		item.setText(adminDao.OrderOut(InitInfo.account));
+		item.setText(adminDao.OrderDisplay(InitInfo.account));
 		//item.setText(new String[] {rs.getString("FIELD1),rs.getString("FIELD2"),rs.getString("FIELD3)});
 
 	}

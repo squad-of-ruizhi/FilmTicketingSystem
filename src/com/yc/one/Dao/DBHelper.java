@@ -15,6 +15,8 @@ public class DBHelper {
 		}
 	}
 
+	public Object setValues;
+
 	/**
 	 * 获取连接的方法
 	 */
@@ -36,7 +38,7 @@ public class DBHelper {
 	 * @param pstmt
 	 * @param con
 	 */
-	private void closeAll(ResultSet rs, PreparedStatement pstmt,Connection con){
+	public void closeAll(ResultSet rs, PreparedStatement pstmt,Connection con){
 		if (rs!=null){
 			try {
 				rs.close();
@@ -65,7 +67,7 @@ public class DBHelper {
 	 * @param pstmt 要赋值的预编译块
 	 * @param params 值列表
 	 */
-	private void setValues(PreparedStatement pstmt,Object ... params){
+	public void setValues(PreparedStatement pstmt,Object ... params){
 		if (pstmt==null||params==null||params.length <=0){
 			return;
 		}
@@ -151,7 +153,7 @@ public class DBHelper {
 	 * @param params
 	 * @return
 	 */
-	public String getTotal(String sql, Object ... params){
+	public String getTotal(String sql, Object ... params){ //获取表中全部数据
 		Connection con=null;
 		PreparedStatement pstmt=null;
 		ResultSet rs=null;
@@ -162,7 +164,9 @@ public class DBHelper {
 			this.setValues(pstmt,params);
 			rs=pstmt.executeQuery();
 			if (rs.next()){
-				return rs.toString();
+					return rs.toString();
+
+
 			}
 		}catch(SQLException e){
 			e.printStackTrace();
