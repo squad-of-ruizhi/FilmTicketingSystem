@@ -1,16 +1,16 @@
 package com.yc.one.Dao;
 
 
+import static com.yc.one.Dao.DBHelper.getConnection;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-import com.yc.one.Dao.DBHelper;
-import com.yc.one.UI.MainUI.MyFilm;
+
 import com.yc.one.Util.InitInfo;
 import com.yc.one.Util.MyFilmList;
 
@@ -24,7 +24,7 @@ public class AdminDao {
 		}
 		return null;
 
-	}
+	} 
 
 	//注册界面数据写入
 	public int Register(String name, String pwd, String tel, String answer) {
@@ -49,7 +49,7 @@ public class AdminDao {
 			return list.get(0);
 		}
 		return null;
-	}
+	} 
 
 	//重置密码
 	public int Repwd(String account, String newpwd) {
@@ -60,8 +60,8 @@ public class AdminDao {
 			return result;
 		}
 		return -1;
-	}
-
+	} 
+  
 	//读取电影信息
 	public String MovieImage(String mname) {  //读取海报图片
 		DBHelper dbHelper = new DBHelper();
@@ -73,7 +73,7 @@ public class AdminDao {
 			return str;
 		}
 		return null;
-	}
+	}  
 
 	public String Money(String mname) {  //读取用户余额
 		DBHelper dbHelper = new DBHelper();
@@ -85,7 +85,7 @@ public class AdminDao {
 			return str;
 		}
 		return null;
-	}
+	}  
 
 	public String Direction(String mname) {  //读取影片地区
 		DBHelper dbHelper = new DBHelper();
@@ -97,7 +97,7 @@ public class AdminDao {
 			return str;
 		}
 		return null;
-	}
+	}  
 
 	public String MovieKind(String mname) {  //读取电影类型
 		DBHelper dbHelper = new DBHelper();
@@ -109,7 +109,7 @@ public class AdminDao {
 			return str;
 		}
 		return null;
-	}
+	}  
 
 	public String MovieActor(String mname) {  //读取电影主演
 		DBHelper dbHelper = new DBHelper();
@@ -121,7 +121,7 @@ public class AdminDao {
 			return str;
 		}
 		return null;
-	}
+	}  
 
 	public String MovieDirector(String mname) {  //读取电影导演
 		DBHelper dbHelper = new DBHelper();
@@ -133,7 +133,7 @@ public class AdminDao {
 			return str;
 		}
 		return null;
-	}
+	}  
 
 	public String MovieTime(String mname) {  //读取电影导演
 		DBHelper dbHelper = new DBHelper();
@@ -145,7 +145,7 @@ public class AdminDao {
 			return str;
 		}
 		return null;
-	}
+	} 
 
 	//订单信息存储
 	public int OrderUpdate(String cname, String mname, int price, String seatlocation, int count) {
@@ -156,7 +156,7 @@ public class AdminDao {
 			return result;
 		}
 		return -1;
-	}
+	} 
 
 	//订单信息输出
 	public static List<MyFilmList> OrderOut(String cname) throws Exception {
@@ -166,13 +166,12 @@ public class AdminDao {
 		List<MyFilmList> myFilmlist = new ArrayList<MyFilmList>();
 		String sql = "select * from myfilm where cname = ?";
 		try {
-			conn = dbHelper.getConnection();
+			conn = getConnection();
 			pstmt = conn.prepareStatement(sql);
 			dbHelper.setValues(pstmt, cname);
 			ResultSet rs = pstmt.executeQuery();
 
 			while (rs.next()) {	//获取指定列表数据
-				String cnamme = rs.getString("cname");
 				String mname = rs.getString("mname");
 				System.out.println("测试点1:"+mname);
 

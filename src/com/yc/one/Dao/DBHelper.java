@@ -92,7 +92,8 @@ public class DBHelper {
 		PreparedStatement pstmt =null;
 		int result =-1;
 		try{
-			con=this.getConnection();
+			Connection connection = getConnection();
+			con = connection;
 			pstmt=con.prepareStatement(sql);
 			this.setValues(pstmt,params);
 			result = pstmt.executeUpdate();
@@ -117,7 +118,7 @@ public class DBHelper {
 		ResultSet rs=null;
 
 		try{
-			con=this.getConnection();
+			con= getConnection();
 			pstmt =con.prepareStatement(sql);
 			this.setValues(pstmt,params);
 			rs=pstmt.executeQuery();
@@ -159,7 +160,7 @@ public class DBHelper {
 		ResultSet rs=null;
 
 		try{
-			con=this.getConnection();
+			con= getConnection();
 			pstmt=con.prepareStatement(sql);
 			this.setValues(pstmt,params);
 			rs=pstmt.executeQuery();
