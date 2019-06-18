@@ -147,7 +147,7 @@ public class WelcomeUI {
 		Label lblNewLabel_1 = new Label(composite_3, SWT.NONE);
 		lblNewLabel_1.addMouseListener(new MouseAdapter() {
 			@Override
-			public void mouseDown(MouseEvent e) {
+			public void mouseDown(MouseEvent e) { //打开全部电影界面
 				InitData.movieUI= new MovieUI();
 				InitData.movieUI.open();
 			}
@@ -161,13 +161,21 @@ public class WelcomeUI {
 		lblNewLabel_2.addMouseListener(new MouseAdapter() {// 点击我的影票
 			@Override
 			public void mouseDown(MouseEvent e) {
+				//电影票信息导入
+				try {
+					AdminDao.OrderOut(InitInfo.account);
+				} catch (Exception ex) {
+					ex.printStackTrace();
+				}
 				if(InitData.myFilm== null){
 					System.out.println("111");
 					InitData.myFilm = new MyFilm(composite_4,SWT.NONE);
+
 				}
 				mf = new MyFilm(composite_4,SWT.NONE);
 				InitData.stackLayout.topControl = InitData.myFilm;
 				System.out.println("222");
+
 				composite_4.layout(); //刷新界面
 			}
 		});

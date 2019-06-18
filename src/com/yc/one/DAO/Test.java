@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Test {
     public static void main(String[] args) {
-        /*AdminDao adminDao=new AdminDao();
+        AdminDao adminDao=new AdminDao();
         String[] strarray= new String[0];
         try {
             List<MyFilmList> list=adminDao.OrderOut("蔡徐坤");
@@ -21,7 +21,7 @@ public class Test {
             }
         } catch (Exception e) {
             e.printStackTrace();
-        }*/
+        }
 
     }
 }

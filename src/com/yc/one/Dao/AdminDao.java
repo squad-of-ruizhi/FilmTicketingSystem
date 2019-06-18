@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 import com.yc.one.Dao.DBHelper;
 import com.yc.one.UI.MainUI.MyFilm;
+import com.yc.one.Util.InitInfo;
 import com.yc.one.Util.MyFilmList;
 
 public class AdminDao {
@@ -170,16 +171,25 @@ public class AdminDao {
 			dbHelper.setValues(pstmt, cname);
 			ResultSet rs = pstmt.executeQuery();
 
-			while (rs.next()) {
+			while (rs.next()) {	//获取指定列表数据
 				String cnamme = rs.getString("cname");
 				String mname = rs.getString("mname");
+				System.out.println("测试点1:"+mname);
+
 				int price = rs.getInt("price");
 				String seatlocation = rs.getString("seatlocation");
 				String hall = rs.getString("hall");
-				String date = rs.getString("date");
+				String date =rs.getString("date");
 				int count = rs.getInt("count");
 				MyFilmList myFilm = new MyFilmList(mname, price, seatlocation, hall, date, count);
 				myFilmlist.add(myFilm);
+				InitInfo.moviename=mname;
+				//System.out.println("测试点2:"+InitInfo.moviename);
+				InitInfo.price=String.valueOf(price);
+				InitInfo.seatlocation=seatlocation;
+				InitInfo.date=date;
+				InitInfo.hall=hall;
+				InitInfo.count=String.valueOf(count);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -189,7 +199,7 @@ public class AdminDao {
 		return myFilmlist;
 	}
 
-	public String[] OrderDisplay(String cname) {
+	/*public String[] OrderDisplay(String cname) {
 		AdminDao adminDao = new AdminDao();
 		String[] strarray = new String[0];
 		try {
@@ -206,7 +216,7 @@ public class AdminDao {
 			e.printStackTrace();
 		}
 		return strarray;
-	}
+	}*/
 
 }
 

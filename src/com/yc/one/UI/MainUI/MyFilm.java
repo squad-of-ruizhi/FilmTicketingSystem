@@ -70,8 +70,8 @@ public class MyFilm extends Composite {
 		//订单信息导出
 		TableItem item = new TableItem(table,SWT.NONE);
 		item = new TableItem(table, SWT.NONE);
-		item.setText(adminDao.OrderDisplay(InitInfo.account));
-		//item.setText(new String[] {rs.getString("FIELD1),rs.getString("FIELD2"),rs.getString("FIELD3)});
+		//item.setText(adminDao.OrderDisplay(InitInfo.account));
+		item.setText(new String[] {InitInfo.moviename,InitInfo.count,InitInfo.price,InitInfo.hall,InitInfo.seatlocation,InitInfo.date});
 
 	}
 
