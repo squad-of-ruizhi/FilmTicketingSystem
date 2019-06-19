@@ -224,9 +224,5 @@ public class AdminDao {
 		return number;
 	}
 
-	public static void main(String[] args) {
-		AdminDao adminDao = new AdminDao();
-		adminDao.OrderID();
-	}
 }
 
