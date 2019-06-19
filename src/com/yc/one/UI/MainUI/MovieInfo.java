@@ -5,6 +5,7 @@ import com.yc.one.Dao.AdminDao;
 import com.yc.one.Util.InitData;
 import com.yc.one.Util.InitInfo;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.*;
 import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Dialog;
@@ -12,17 +13,15 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 
-
-
-import org.eclipse.swt.events.SelectionAdapter;
-import org.eclipse.swt.events.SelectionEvent;
-import org.eclipse.swt.events.MouseAdapter;
-import org.eclipse.swt.events.MouseEvent;
-
 public class MovieInfo extends Dialog {
 
 	protected Object result;
 	protected Shell shell;
+	private boolean isDown = false;
+	private int clickX;
+	private int clickY;
+
+
 
 	/**
 	 * Create the dialog.
@@ -32,6 +31,7 @@ public class MovieInfo extends Dialog {
 	public MovieInfo(Shell parent, int style) {
 		super(parent, style);
 		setText("电影详情");
+
 	}
 
 
@@ -61,6 +61,22 @@ public class MovieInfo extends Dialog {
 		shell = new Shell(getParent(), getStyle());
 		shell.setSize(1100, 750);
 		shell.setText("在线选座");
+
+		shell.addMouseMoveListener(new MouseMoveListener() {
+			@Override
+			public void mouseMove(MouseEvent e) {
+				if(isDown){ //说明你要拖动
+					// 获取现在光标所在的位置
+					int x = e.x;
+					int y = e.y;
+
+					x = x - clickX;
+					y = y - clickY;
+
+					shell.setLocation(shell.getLocation().x + x,shell.getLocation().y + y);
+				}
+			}
+		});
 		AdminDao adminDao=new AdminDao();
 		
 		Rectangle rtl = Display.getDefault().getClientArea();

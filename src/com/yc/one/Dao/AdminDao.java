@@ -6,15 +6,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-import com.yc.one.Dao.DBHelper;
-import com.yc.one.UI.MainUI.MyFilm;
 import com.yc.one.Util.InitInfo;
 import com.yc.one.Util.MyFilmList;
 
 public class AdminDao {
+
+	int numbercount = 0;
+
 	public Map<String, String> Login(String account, String pwd) {
 		DBHelper db = new com.yc.one.Dao.DBHelper();
 		String sql = "select cname, pwd from costumer where cname = ? and pwd = ?";
@@ -149,8 +149,9 @@ public class AdminDao {
 
 	//订单信息存储
 	public int OrderUpdate(String cname, String mname, int price, String seatlocation, int count) {
+
 		DBHelper dbHelper = new DBHelper();
-		String sql = "INSERT INTO myfilm (cname,mname,price,seatlocation,hall,count) VALUES (?,?,?,?,01,?);";
+		String sql = "INSERT INTO myfilm (cname,mname,price,seatlocation,hall,count,Number) VALUES (?,?,?,?,01,?," + OrderID() + 1 + ");";
 		int result = dbHelper.update(sql, cname, mname, price, seatlocation, count);
 		if (result != -1) {
 			return result;
@@ -171,25 +172,25 @@ public class AdminDao {
 			dbHelper.setValues(pstmt, cname);
 			ResultSet rs = pstmt.executeQuery();
 
-			while (rs.next()) {	//获取指定列表数据
+			while (rs.next()) {    //获取指定列表数据
 				String cnamme = rs.getString("cname");
 				String mname = rs.getString("mname");
-				System.out.println("测试点1:"+mname);
+				System.out.println("测试点1:" + mname);
 
 				int price = rs.getInt("price");
 				String seatlocation = rs.getString("seatlocation");
 				String hall = rs.getString("hall");
-				String date =rs.getString("date");
+				String date = rs.getString("date");
 				int count = rs.getInt("count");
 				MyFilmList myFilm = new MyFilmList(mname, price, seatlocation, hall, date, count);
 				myFilmlist.add(myFilm);
-				InitInfo.moviename=mname;
+				InitInfo.moviename = mname;
 				//System.out.println("测试点2:"+InitInfo.moviename);
-				InitInfo.price=String.valueOf(price);
-				InitInfo.seatlocation=seatlocation;
-				InitInfo.date=date;
-				InitInfo.hall=hall;
-				InitInfo.count=String.valueOf(count);
+				InitInfo.price = String.valueOf(price);
+				InitInfo.seatlocation = seatlocation;
+				InitInfo.date = date;
+				InitInfo.hall = hall;
+				InitInfo.count = String.valueOf(count);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -199,24 +200,33 @@ public class AdminDao {
 		return myFilmlist;
 	}
 
-	/*public String[] OrderDisplay(String cname) {
-		AdminDao adminDao = new AdminDao();
-		String[] strarray = new String[0];
+	//订单序号拉取
+	private int OrderID() {
+		int number = 0;
+		String sql = "select MAX(Number) from myfilm;";
+		Connection conn = null;
+		DBHelper dbHelper = new DBHelper();
+		PreparedStatement pstmt = null;
 		try {
-			List<MyFilmList> list = adminDao.OrderOut(cname);
-			for (int i = 0; i < list.size(); i++) {
+			conn = dbHelper.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			ResultSet rs = pstmt.executeQuery();
 
-				String str = list.get(i).toString();
-				str = str.substring(str.indexOf("mn"), str.lastIndexOf("}"));
-				strarray = str.split(",", 7);
-				String string = Arrays.toString(strarray);
-				System.out.println(string);
+			while (rs.next()) {    //获取指定列表数据
+				number = rs.getInt("MAX(Number)");
+				System.out.println("测试点3:" + number);
 			}
-		} catch (Exception e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			dbHelper.closeAll(null, pstmt, conn);
 		}
-		return strarray;
-	}*/
+		return number;
+	}
 
+	public static void main(String[] args) {
+		AdminDao adminDao = new AdminDao();
+		adminDao.OrderID();
+	}
 }
 

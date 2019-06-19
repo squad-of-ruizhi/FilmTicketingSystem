@@ -95,8 +95,7 @@ public class Login {
 		shell.setSize(1019, 731);
 		shell.setText("睿智影城登录系统");
 		
-		
-		
+
 		shell.addMouseMoveListener(new MouseMoveListener() { // 拖动界面
 			public void mouseMove(MouseEvent e) {
 				if(isDown){ //说明你要拖动
