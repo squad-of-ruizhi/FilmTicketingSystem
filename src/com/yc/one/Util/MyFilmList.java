@@ -1,6 +1,5 @@
 package com.yc.one.Util;
 
-import com.yc.one.UI.MainUI.MyFilm;
 
 public class MyFilmList  {
     private String mname;

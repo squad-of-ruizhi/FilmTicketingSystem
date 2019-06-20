@@ -7,9 +7,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f9c8c868-8df6-4914-9509-86638eb38c22" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yc/one/Dao/AdminDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yc/one/Dao/AdminDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yc/one/UI/Login/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yc/one/UI/Login/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yc/one/UI/MainUI/MovieInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yc/one/UI/MainUI/MovieInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmTicketingSystem/com/yc/one/Dao/AdminDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmTicketingSystem/com/yc/one/Dao/AdminDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmTicketingSystem/com/yc/one/Dao/DBHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmTicketingSystem/com/yc/one/Dao/DBHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yc/one/Util/MyFilmList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yc/one/Util/MyFilmList.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,8 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/yc/one/UI/Login/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-253">
-              <caret line="83" column="4" lean-forward="true" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
+            <state relative-caret-position="5000">
+              <caret line="236" column="44" selection-start-line="236" selection-start-column="44" selection-end-line="236" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -49,11 +49,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/yc/one/Dao/AdminDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="695">
-              <caret line="230" column="1" selection-start-line="230" selection-start-column="1" selection-end-line="230" selection-end-column="1" />
+            <state relative-caret-position="497">
+              <caret line="167" column="51" selection-start-line="167" selection-start-column="22" selection-end-line="167" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5095#5107#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/yc/one/UI/MainUI/MyFilm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="973">
-              <caret line="49" column="40" lean-forward="true" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
+            <state relative-caret-position="-528">
+              <caret line="32" column="61" lean-forward="true" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -80,24 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/yc/one/UI/MainUI/MovieInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="72" column="35" lean-forward="true" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4777#4899#0" expanded="true" />
-                <element signature="e#4898#4899#0" expanded="true" />
-                <element signature="e#4939#5091#0" expanded="true" />
-                <element signature="e#5090#5091#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/yc/one/Dao/Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+            <state relative-caret-position="3508">
+              <caret line="159" column="35" selection-start-line="159" selection-start-column="35" selection-end-line="159" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/yc/one/Util/MyFilmList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+            <state relative-caret-position="650">
+              <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -182,22 +165,22 @@
         <option value="$PROJECT_DIR$/src/com/yc/one/UI/PayUI/Dingdan.java" />
         <option value="$PROJECT_DIR$/src/com/yc/one/UI/MainUI/Test.java" />
         <option value="$PROJECT_DIR$/src/com/yc/one/UI/MainUI/IndexUI.java" />
-        <option value="$PROJECT_DIR$/src/com/yc/one/Util/MyFilmList.java" />
         <option value="$PROJECT_DIR$/src/com/yc/one/Dao/DBHelper.java" />
         <option value="$PROJECT_DIR$/src/com/yc/one/Dao/Test.java" />
         <option value="$PROJECT_DIR$/src/com/yc/one/Util/InitInfo.java" />
         <option value="$PROJECT_DIR$/src/com/yc/one/UI/MainUI/WelcomeUI.java" />
-        <option value="$PROJECT_DIR$/src/com/yc/one/UI/MainUI/MyFilm.java" />
         <option value="$PROJECT_DIR$/src/com/yc/one/UI/Login/Login.java" />
-        <option value="$PROJECT_DIR$/src/com/yc/one/UI/MainUI/MovieInfo.java" />
         <option value="$PROJECT_DIR$/src/com/yc/one/UI/Login/Test.java" />
         <option value="$PROJECT_DIR$/src/com/yc/one/Dao/AdminDao.java" />
+        <option value="$PROJECT_DIR$/src/com/yc/one/Util/MyFilmList.java" />
+        <option value="$PROJECT_DIR$/src/com/yc/one/UI/MainUI/MovieInfo.java" />
+        <option value="$PROJECT_DIR$/src/com/yc/one/UI/MainUI/MyFilm.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="167" />
-    <option name="y" value="-9" />
+    <option name="x" value="160" />
+    <option name="y" value="-20" />
     <option name="width" value="1478" />
     <option name="height" value="916" />
   </component>
@@ -271,19 +254,14 @@
             </path>
             <path>
               <item name="FilmTicketingSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FilmTicketingSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="swt_64" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FilmTicketingSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -335,7 +313,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.AdminDao">
+  <component name="RunManager" selected="Application.Login">
     <configuration name="AdminDao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.yc.one.Dao.AdminDao" />
       <module name="FilmTicketingSystem" />
@@ -403,8 +381,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AdminDao" />
         <item itemvalue="Application.Login" />
+        <item itemvalue="Application.AdminDao" />
         <item itemvalue="Application.Test (1)" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.MovieUI" />
@@ -442,7 +420,9 @@
       <workItem from="1560876931652" duration="180000" />
       <workItem from="1560877138766" duration="598000" />
       <workItem from="1560929625826" duration="853000" />
-      <workItem from="1560938813016" duration="8367000" />
+      <workItem from="1560938813016" duration="9886000" />
+      <workItem from="1560957888735" duration="2123000" />
+      <workItem from="1561019096658" duration="3320000" />
     </task>
     <task id="LOCAL-00001" summary="主界面设计更新">
       <created>1559144349548</created>
@@ -598,17 +578,31 @@
       <option name="project" value="LOCAL" />
       <updated>1560835282362</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="OrderID方法(多订单数据写入)及测试">
+      <created>1560951644782</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1560951644782</updated>
+    </task>
+    <task id="LOCAL-00024" summary="OrderID方法(多订单数据写入)及测试">
+      <created>1560951736301</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1560951736301</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68272000" />
+    <option name="totallyTimeSpent" value="75234000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1391258" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14232409" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -617,7 +611,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49520257" visible="true" weight="0.08026031" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49520257" weight="0.14750542" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4915254" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -692,7 +686,8 @@
     <MESSAGE value="我的电影票界面更新" />
     <MESSAGE value="数据库功能更新" />
     <MESSAGE value="OrderOut方法更新及测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="OrderOut方法更新及测试" />
+    <MESSAGE value="OrderID方法(多订单数据写入)及测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="OrderID方法(多订单数据写入)及测试" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FilmTicketingSystem$PreMainUI.ic" NAME="PreMainUI Coverage Results" MODIFIED="1559217338084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -898,30 +893,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yc/one/Dao/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yc/one/Util/MyFilmList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yc/one/Util/InitInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yc/one/UI/MainUI/WelcomeUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-975">
@@ -933,48 +904,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yc/one/UI/Login/Test.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/yc/one/Dao/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yc/one/UI/Login/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-253">
-          <caret line="83" column="4" lean-forward="true" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
+        <state relative-caret-position="5000">
+          <caret line="236" column="44" selection-start-line="236" selection-start-column="44" selection-end-line="236" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yc/one/Util/InitInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yc/one/Util/MyFilmList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yc/one/UI/MainUI/MovieInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="72" column="35" lean-forward="true" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
+        <state relative-caret-position="3508">
+          <caret line="159" column="35" selection-start-line="159" selection-start-column="35" selection-end-line="159" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4777#4899#0" expanded="true" />
-            <element signature="e#4898#4899#0" expanded="true" />
-            <element signature="e#4939#5091#0" expanded="true" />
-            <element signature="e#5090#5091#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yc/one/UI/MainUI/MyFilm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="973">
-          <caret line="49" column="40" lean-forward="true" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yc/one/UI/Login/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="-528">
+          <caret line="32" column="61" lean-forward="true" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yc/one/Dao/AdminDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="230" column="1" selection-start-line="230" selection-start-column="1" selection-end-line="230" selection-end-column="1" />
+        <state relative-caret-position="497">
+          <caret line="167" column="51" selection-start-line="167" selection-start-column="22" selection-end-line="167" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5095#5107#0" expanded="true" />
           </folding>
         </state>
       </provider>
