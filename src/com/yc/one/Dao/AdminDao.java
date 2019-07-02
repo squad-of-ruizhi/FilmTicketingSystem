@@ -147,6 +147,18 @@ public class AdminDao {
 		return null;
 	}
 
+	public String MovieDetails(String mname) {  //读取电影简介
+		DBHelper dbHelper = new DBHelper();
+		String sql = "select introduce from movie where mname=?;";
+		List<Map<String, String>> list = dbHelper.find(sql, mname);
+		if (list != null && list.size() > 0) {
+			String str = list.get(0).toString();
+			str = str.substring(str.indexOf("=") + 1, str.lastIndexOf("}"));
+			return str;
+		}
+		return null;
+	}
+
 	//订单信息存储
 	public int OrderUpdate(String cname, String mname, int price, String seatlocation, int count) {
 

@@ -123,7 +123,7 @@ public class MovieInfo extends Dialog {
 		
 		Label lblNewLabel_8 = new Label(shell, SWT.NONE);
 		lblNewLabel_8.setBounds(465, 222, 570, 220);
-		lblNewLabel_8.setText("简介：创世晶石危机一触即发，为了阻止地球毁灭，奥特曼选择了看似平凡的小男孩\r\n\r\n乐乐作为自己的人间体，面对重重挑战，原本调皮捣蛋的小屁孩在奥特曼的引导下，\r\n\r\n成为拯救地球的关键人物，而奥特曼超能力的秘密也逐渐被揭晓……");
+		lblNewLabel_8.setText("简介："+adminDao.MovieDetails(InitInfo.moviename));
 		
 		Button btnNewButton = new Button(shell, SWT.NONE);
 		
