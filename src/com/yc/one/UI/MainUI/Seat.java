@@ -2,10 +2,9 @@ package com.yc.one.UI.MainUI;
 
 import com.swtdesigner.SWTResourceManager;
 import com.yc.one.Dao.AdminDao;
-import com.yc.one.Util.InitData;
 import com.yc.one.Util.InitInfo;
 import com.yc.one.Util.MySeat;
-import org.eclipse.core.runtime.Path;
+import com.yc.one.Util.SeatIndex;
 import org.eclipse.swt.events.MouseAdapter;
 import org.eclipse.swt.events.MouseEvent;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -19,7 +18,6 @@ import org.eclipse.swt.layout.FillLayout;
 import java.util.*;
 import java.util.List;
 
-import static com.yc.one.Util.InitInfo.price;
 
 public class Seat {
 
@@ -30,7 +28,6 @@ public class Seat {
 	private Label label_25;
 	/**
 	 * Launch the application.
-	 * @param args
 	 */
 	public static void main(String[] args) {
 		try {
@@ -139,23 +136,22 @@ public class Seat {
 				la.setImage(SWTResourceManager.getImage(Seat.class, "/image/空位.png"));
 				la.setBounds(198+120*col, 338+83*row, 48, 41);
 				map.put(la,new MySeat(row,col));
+				SeatIndex seatNO= new SeatIndex();
+				int index=seatNO.SeatSelected(row,col);	//获取座位号
+
 				la.addMouseListener(new MouseAdapter() {
 					private boolean clicked;
 					@Override
 					public void mouseDown(MouseEvent e) {
 						Label l = (Label)e.getSource();
 						MySeat mseat = map.get(l);
-						if(clicked){
+						if(clicked){System.out.println(index);
 							for (int a=0;a<list.size();a++){
-								if(mseat.getX()==list.get(a).getX()&&list.get(a).getY()==mseat.getY()){
-									list.remove(a);
+								if(mseat.getX()==list.get(a).getX()&&list.get(a).getY()==mseat.getY())
+								{list.remove(a);}
+							}
+							l.setImage(SWTResourceManager.getImage(Seat.class, "/image/空位.png"));
 
-								}
-							}
-							if (mseat.SeatSelected(InitData.seatStatus, mseat.getX(), mseat.getY())){
-								l.setImage(SWTResourceManager.getImage(Seat.class, "/image/已售位.png"));
-							}
-								l.setImage(SWTResourceManager.getImage(Seat.class, "/image/空位.png"));
 
 							//座位信息传递
 							label_24.setText("座位："+InitInfo.seatlocation);
@@ -172,7 +168,7 @@ public class Seat {
 							label_24.setText("座位："+InitInfo.seatlocation);
 							clicked = true;
 							price=price+50;
-							System.out.println(price);
+							//System.out.println(price);
 							label_25.setText("总价："+price+"元");
 						}
 						shell.layout();
