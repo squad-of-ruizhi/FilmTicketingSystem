@@ -189,7 +189,7 @@ public class WelcomeUI {
 		lblNewLabel_5.setFont(SWTResourceManager.getFont("华文琥珀", 16, SWT.NORMAL));
 		lblNewLabel_5.setForeground(SWTResourceManager.getColor(SWT.COLOR_RED));
 		lblNewLabel_5.setBounds(28, 135, 69, 28);
-		lblNewLabel_5.setText("退票");
+		//lblNewLabel_5.setText("退票");
 		
 		composite_4 = new Composite(sashForm_1, SWT.NONE);
 		composite_4.setLayout(InitData.stackLayout);

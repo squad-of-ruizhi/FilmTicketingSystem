@@ -31,4 +31,13 @@ public class MySeat {
     public void setY(int y) {
         this.y = y;
     }
+    public boolean SeatSelected(int arr[],int x,int y){
+        int index=(x - 1) * 6 + y - 1;
+        if (arr[index] == 0) {
+            arr[index] = 1;
+            return false; //    可以选择
+        }else{
+            return true; //     此座有人
+        }
+    }
 }

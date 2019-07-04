@@ -6,12 +6,10 @@ import com.yc.one.Util.InitData;
 import com.yc.one.Util.InitInfo;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
-import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Shell;
-import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.*;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.widgets.Text;
+
+import java.io.IOException;
 
 public class MovieUI {
 
@@ -395,6 +393,20 @@ public class MovieUI {
 		Button button_25 = new Button(shell, SWT.NONE);
 		button_25.setImage(SWTResourceManager.getImage(MovieUI.class, "/image/搜索.jpg"));
 		button_25.setBounds(1263, 43, 100, 45);
+
+		Link link =new Link(shell,SWT.NONE);
+		button_25.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				link.setText("更多影片");
+				try {
+					Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler www.youku.com");
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+
+			}
+		});
 		
 		Button button_26 = new Button(shell, SWT.NONE);
 		button_26.setBounds(246, 752, 98, 30);

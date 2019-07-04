@@ -31,4 +31,5 @@ public class InitData {
 	public static WelcomeUI welcome;
 	public static MyFilm myFilm;
 	public static IndexUI indexUI;
+	public static int[] seatStatus;
 }

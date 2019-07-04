@@ -2,8 +2,10 @@ package com.yc.one.UI.MainUI;
 
 import com.swtdesigner.SWTResourceManager;
 import com.yc.one.Dao.AdminDao;
+import com.yc.one.Util.InitData;
 import com.yc.one.Util.InitInfo;
 import com.yc.one.Util.MySeat;
+import org.eclipse.core.runtime.Path;
 import org.eclipse.swt.events.MouseAdapter;
 import org.eclipse.swt.events.MouseEvent;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -150,12 +152,18 @@ public class Seat {
 
 								}
 							}
-							l.setImage(SWTResourceManager.getImage(Seat.class, "/image/空位.png"));
+							if (mseat.SeatSelected(InitData.seatStatus, mseat.getX(), mseat.getY())){
+								l.setImage(SWTResourceManager.getImage(Seat.class, "/image/已售位.png"));
+							}
+								l.setImage(SWTResourceManager.getImage(Seat.class, "/image/空位.png"));
+
+							//座位信息传递
 							label_24.setText("座位："+InitInfo.seatlocation);
 							clicked = false;
 							price=price-50;
 							System.out.println(price);
 							label_25.setText("总价："+price+"元");
+							
 						}else{
 							l.setImage(SWTResourceManager.getImage(Seat.class, "/image/已选位.png"));
 							list.add(mseat);
@@ -290,6 +298,7 @@ public class Seat {
 				mb.setText("提示:");
 				mb.setMessage("购票成功,请到前台领取票据！");
 				mb.open();
+				shell.dispose();
 			}
 		});
 
