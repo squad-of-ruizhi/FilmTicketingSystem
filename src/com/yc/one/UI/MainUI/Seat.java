@@ -23,9 +23,10 @@ public class Seat {
 
 	protected Shell shell;
 
-	private int price=0;
+	private int price=0;	//总票价
 	private Label label_24;
 	private Label label_25;
+	private int index=0; //已选座位号
 	/**
 	 * Launch the application.
 	 */
@@ -130,6 +131,8 @@ public class Seat {
 		label_8.setBounds(584, 212, 120, 39);
 		label_8.setText("银幕中央");
 		Map<Label,MySeat> map = new HashMap<>();
+
+		//座位表输出
 		for(int row=1;row<6;row++){
 			for(int col=1;col<9;col++){
 				Label la = new Label(composite_2, SWT.NONE);
@@ -137,7 +140,7 @@ public class Seat {
 				la.setBounds(198+120*col, 338+83*row, 48, 41);
 				map.put(la,new MySeat(row,col));
 				SeatIndex seatNO= new SeatIndex();
-				int index=seatNO.SeatSelected(row,col);	//获取座位号
+				//int index=seatNO.SeatSelected(row,col);	//获取座位号
 
 				la.addMouseListener(new MouseAdapter() {
 					private boolean clicked;
@@ -145,7 +148,8 @@ public class Seat {
 					public void mouseDown(MouseEvent e) {
 						Label l = (Label)e.getSource();
 						MySeat mseat = map.get(l);
-						if(clicked){System.out.println(index);
+						if(clicked){
+							System.out.println(index);	//测试点4：座位号
 							for (int a=0;a<list.size();a++){
 								if(mseat.getX()==list.get(a).getX()&&list.get(a).getY()==mseat.getY())
 								{list.remove(a);}
@@ -157,18 +161,21 @@ public class Seat {
 							label_24.setText("座位："+InitInfo.seatlocation);
 							clicked = false;
 							price=price-50;
-							System.out.println(price);
 							label_25.setText("总价："+price+"元");
 							
 						}else{
 							l.setImage(SWTResourceManager.getImage(Seat.class, "/image/已选位.png"));
 							list.add(mseat);
-							InitInfo.seatlocation=Arrays.toString(list.toArray());
-							System.out.println(Arrays.toString(list.toArray()));
+							InitInfo.seatlocation=mseat.getX()+"排"+mseat.getY()+"列";
+							System.out.println("测试点6："+mseat.getX()+","+mseat.getY());	//测试点6：座位坐标
+
+							index=seatNO.SeatSelected(mseat.getX(),mseat.getY()); //已选座位号获取
+							InitInfo.SeatsSelected=seatNO.ArrIn(index);	//存入已选座位
+							adminDao.SeatIndexUpdate(InitInfo.moviename,InitInfo.SeatsSelected); //将获取的已选座位存入数据库
+
 							label_24.setText("座位："+InitInfo.seatlocation);
 							clicked = true;
 							price=price+50;
-							//System.out.println(price);
 							label_25.setText("总价："+price+"元");
 						}
 						shell.layout();

@@ -5,9 +5,8 @@ public class InitInfo {
     public static String seatlocation;
     public static String count;
     public static String hall;
-    public  String[][] seat;
+    public  static String[] SeatsSelected;
     public  static String moviename;
-    public static  String[] bill;
     public static String price;
     public static String date;
 }

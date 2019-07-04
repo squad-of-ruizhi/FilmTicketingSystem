@@ -12,8 +12,7 @@ public class Test1 {
             for(int col=1;col<9;col++){
                 index=mySeat.SeatSelected(row,col);
                 a=mySeat.ArrIn(index);
-            }
-
+                }
             }
             System.out.println(Arrays.toString(a));
         }

@@ -5,21 +5,19 @@
     <bookmark url="file://$PROJECT_DIR$/src/com/yc/one/UI/MainUI/MovieInfo.java" line="158" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9c8c868-8df6-4914-9509-86638eb38c22" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/yc/one/Test/Test1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/yc/one/Util/SeatIndex.java" afterDir="false" />
+    <list default="true" id="f9c8c868-8df6-4914-9509-86638eb38c22" name="Default Changelist" comment="座位表信息获取">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmTicketingSystem/com/yc/one/Dao/AdminDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmTicketingSystem/com/yc/one/Dao/AdminDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmTicketingSystem/com/yc/one/UI/MainUI/MainUI3$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmTicketingSystem/com/yc/one/UI/MainUI/MainUI3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmTicketingSystem/com/yc/one/UI/MainUI/MainUI4.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FilmTicketingSystem/com/yc/one/UI/MainUI/Seat$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmTicketingSystem/com/yc/one/UI/MainUI/Seat$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FilmTicketingSystem/com/yc/one/UI/MainUI/Seat$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmTicketingSystem/com/yc/one/UI/MainUI/Seat$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FilmTicketingSystem/com/yc/one/UI/MainUI/Seat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmTicketingSystem/com/yc/one/UI/MainUI/Seat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmTicketingSystem/com/yc/one/UI/PayUI/Dingdan$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmTicketingSystem/com/yc/one/UI/PayUI/Dingdan.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmTicketingSystem/com/yc/one/Util/MySeat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmTicketingSystem/com/yc/one/Util/MySeat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yc/one/UI/MainUI/MainUI3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yc/one/UI/MainUI/MainUI4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yc/one/Dao/AdminDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yc/one/Dao/AdminDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yc/one/Test/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yc/one/Test/Test1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/yc/one/UI/MainUI/Seat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yc/one/UI/MainUI/Seat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yc/one/UI/PayUI/Dingdan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yc/one/Util/MySeat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yc/one/Util/MySeat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yc/one/Util/InitInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yc/one/Util/InitInfo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,7 +58,7 @@
         <item name="aliyun@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="FilmTicketingSystem: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="myfilm: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="movie: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -70,42 +68,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/yc/one/Util/MyFilmList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/yc/one/Util/MySeat.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-              <folding>
-                <element signature="e#329#330#0" expanded="true" />
-                <element signature="e#353#354#0" expanded="true" />
-                <element signature="e#378#379#0" expanded="true" />
-                <element signature="e#402#403#0" expanded="true" />
-                <element signature="e#433#434#0" expanded="true" />
-                <element signature="e#459#460#0" expanded="true" />
-                <element signature="e#490#491#0" expanded="true" />
-                <element signature="e#516#517#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/yc/one/UI/MainUI/Seat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="132" column="35" selection-start-line="132" selection-start-column="35" selection-end-line="132" selection-end-column="35" />
+            <state relative-caret-position="2508">
+              <caret line="261" column="36" lean-forward="true" selection-start-line="261" selection-start-column="36" selection-end-line="261" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/yc/one/Util/InitInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -113,20 +92,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/yc/one/Util/SeatIndex.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/yc/one/Test/Test1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="154">
+              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -147,6 +114,7 @@
       <find>mf</find>
       <find>退</find>
       <find>搜索</find>
+      <find>seatlocation</find>
     </findStrings>
     <replaceStrings>
       <replace>WelcomeUI</replace>
@@ -200,22 +168,22 @@
         <option value="$PROJECT_DIR$/src/com/yc/one/UI/MainUI/IndexUI.java" />
         <option value="$PROJECT_DIR$/src/com/yc/one/Dao/DBHelper.java" />
         <option value="$PROJECT_DIR$/src/com/yc/one/Dao/Test.java" />
-        <option value="$PROJECT_DIR$/src/com/yc/one/Util/InitInfo.java" />
         <option value="$PROJECT_DIR$/src/com/yc/one/UI/Login/Login.java" />
         <option value="$PROJECT_DIR$/src/com/yc/one/UI/Login/Test.java" />
         <option value="$PROJECT_DIR$/src/com/yc/one/Util/MyFilmList.java" />
         <option value="$PROJECT_DIR$/src/com/yc/one/UI/MainUI/MyFilm.java" />
-        <option value="$PROJECT_DIR$/src/com/yc/one/Dao/AdminDao.java" />
         <option value="$PROJECT_DIR$/src/com/yc/one/UI/MainUI/MovieInfo.java" />
         <option value="$PROJECT_DIR$/src/com/yc/one/UI/MainUI/WelcomeUI.java" />
         <option value="$PROJECT_DIR$/src/com/yc/one/UI/MainUI/MovieUI.java" />
         <option value="$PROJECT_DIR$/src/com/yc/one/Util/InitData.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/src/com/yc/one/Util/MySeat.java" />
-        <option value="$PROJECT_DIR$/src/com/yc/one/UI/MainUI/Seat.java" />
         <option value="$PROJECT_DIR$/src/com/yc/one/Test/Test01.java" />
         <option value="$PROJECT_DIR$/src/com/yc/one/Util/SeatIndex.java" />
         <option value="$PROJECT_DIR$/src/com/yc/one/Test/Test1.java" />
+        <option value="$PROJECT_DIR$/src/com/yc/one/Dao/AdminDao.java" />
+        <option value="$PROJECT_DIR$/src/com/yc/one/Util/InitInfo.java" />
+        <option value="$PROJECT_DIR$/src/com/yc/one/UI/MainUI/Seat.java" />
       </list>
     </option>
   </component>
@@ -226,10 +194,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="795" />
-    <option name="y" value="564" />
-    <option name="width" value="1485" />
-    <option name="height" value="870" />
+    <option name="x" value="595" />
+    <option name="y" value="423" />
+    <option name="width" value="837" />
+    <option name="height" value="491" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -259,6 +227,13 @@
               <item name="FilmTicketingSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="one" type="462c0819:PsiDirectoryNode" />
+              <item name="Dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FilmTicketingSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FilmTicketingSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="one" type="462c0819:PsiDirectoryNode" />
               <item name="UI" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -280,8 +255,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -294,7 +269,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="database.console.LAST_STATE" value="true" />
+    <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/yc/one/Dao/mysql-connector-java-8.0.15.jar" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
@@ -303,19 +278,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\FilmTicketingSystem\src\com\yc\one\UI\MainUI" />
-      <recent name="E:\FilmTicketingSystem\src\image" />
-      <recent name="E:\FilmTicketingSystem\src\com\yc\one\UI\PayUI" />
-      <recent name="E:\FilmTicketingSystem\src\com\yc\one\UI\Login" />
-      <recent name="E:\FilmTicketingSystem\src\com\yc\one\Util" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\FilmTicketingSystem\src\image" />
       <recent name="E:\FilmTicketingSystem\src\com\yc\one\UI\MainUI" />
       <recent name="E:\FilmTicketingSystem\src\com\yc\one\UI" />
       <recent name="E:\FilmTicketingSystem\src\com\yc\one\UI\Login" />
       <recent name="E:\FilmTicketingSystem\src\com\yc\one\UI\PayUIDetails" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\FilmTicketingSystem\src\com\yc\one\UI\MainUI" />
+      <recent name="E:\FilmTicketingSystem\src\image" />
+      <recent name="E:\FilmTicketingSystem\src\com\yc\one\UI\PayUI" />
+      <recent name="E:\FilmTicketingSystem\src\com\yc\one\UI\Login" />
+      <recent name="E:\FilmTicketingSystem\src\com\yc\one\Util" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -335,7 +310,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Test1">
+  <component name="RunManager" selected="Application.Login">
     <configuration name="AdminDao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.yc.one.Dao.AdminDao" />
       <module name="FilmTicketingSystem" />
@@ -416,9 +391,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Login" />
         <item itemvalue="Application.Test1" />
         <item itemvalue="Application.Test01" />
-        <item itemvalue="Application.Login" />
         <item itemvalue="Application.AdminDao" />
         <item itemvalue="Application.Test" />
       </list>
@@ -462,7 +437,8 @@
       <workItem from="1562077549362" duration="643000" />
       <workItem from="1562204996463" duration="4441000" />
       <workItem from="1562210543055" duration="18123000" />
-      <workItem from="1562239834591" duration="1854000" />
+      <workItem from="1562239834591" duration="8471000" />
+      <workItem from="1562248641438" duration="471000" />
     </task>
     <task id="LOCAL-00001" summary="主界面设计更新">
       <created>1559144349548</created>
@@ -646,17 +622,24 @@
       <option name="project" value="LOCAL" />
       <updated>1562215935008</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="座位表信息获取">
+      <created>1562241797724</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1562241797724</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101290000" />
+    <option name="totallyTimeSpent" value="108378000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1935" height="1175" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18273841" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13745338" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -664,8 +647,42 @@
       <window_info id="Image Layers" order="5" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49490616" visible="true" weight="0.24352828" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32981783" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49490616" weight="0.24352828" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4915254" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4989339" weight="0.14642082" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5050938" side_tool="true" weight="0.16490892" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49946696" weight="0.28092042" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.25982744" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.3297414" />
+      <window_info anchor="right" id="PlantUML" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Coverage" order="7" side_tool="true" weight="0.32995737" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="Database" order="9" weight="0.25839105" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18273841" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32981783" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49490616" weight="0.24352828" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4915254" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -676,7 +693,7 @@
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49946696" weight="0.28092042" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Database Console" order="13" weight="0.2605289" />
+      <window_info active="true" anchor="bottom" id="Database Console" order="13" visible="true" weight="0.25982744" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -686,41 +703,7 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Coverage" order="7" side_tool="true" weight="0.32995737" />
       <window_info anchor="right" id="Capture Analysis" order="8" />
-      <window_info anchor="right" id="Database" order="9" weight="0.25844505" />
-      <window_info anchor="right" id="Theme Preview" order="10" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1808" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info id="Image Layers" order="5" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Database Console" order="0" weight="0.2605289" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49490616" visible="true" weight="0.24423076" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4915254" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4989339" weight="0.14642082" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5050938" side_tool="true" weight="0.16552399" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49946696" weight="0.28173077" />
-      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" weight="0.3297414" />
-      <window_info anchor="right" id="PlantUML" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Coverage" order="7" side_tool="true" weight="0.32995737" />
-      <window_info anchor="right" id="Capture Analysis" order="8" />
-      <window_info anchor="right" id="Database" order="9" weight="0.25844505" />
+      <window_info anchor="right" id="Database" order="9" visible="true" weight="0.25839105" />
       <window_info anchor="right" id="Theme Preview" order="10" />
     </layout-to-restore>
   </component>
@@ -777,7 +760,8 @@
     <MESSAGE value="OrderOut方法更新及测试" />
     <MESSAGE value="OrderID方法(多订单数据写入)及测试" />
     <MESSAGE value="超链接功能和界面完善" />
-    <option name="LAST_COMMIT_MESSAGE" value="超链接功能和界面完善" />
+    <MESSAGE value="座位表信息获取" />
+    <option name="LAST_COMMIT_MESSAGE" value="座位表信息获取" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FilmTicketingSystem$PreMainUI.ic" NAME="PreMainUI Coverage Results" MODIFIED="1559217338084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -845,16 +829,7 @@
     <entry file="file://$PROJECT_DIR$/src/image/白背景.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yc/one/UI/MainUI/MainUI4.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="50" column="81" lean-forward="true" selection-start-line="50" selection-start-column="81" selection-end-line="50" selection-end-column="81" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yc/one/UI/MainUI/MainUI4.java" />
     <entry file="file://$PROJECT_DIR$/src/com/yc/one/UI/MainUI/MainUI.java" />
     <entry file="file://$PROJECT_DIR$/src/image/购票副本.png">
       <provider selected="true" editor-type-id="images" />
@@ -940,23 +915,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yc/one/Dao/AdminDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3168">
-          <caret line="152" column="33" selection-start-line="152" selection-start-column="33" selection-end-line="152" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yc/one/Util/InitInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yc/one/UI/MainUI/MyFilm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
@@ -1000,15 +958,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://4b948f79-1192-446d-ac70-e07f0d7d8f92/schema/FilmTicketingSystem/table/movie">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="dfdba693-4260-4b22-b2bd-32b5ba0ffd50">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yc/one/UI/MainUI/MovieInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-669">
@@ -1019,15 +968,6 @@
             <element signature="e#4924#5076#0" expanded="true" />
             <element signature="e#5075#5076#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://4b948f79-1192-446d-ac70-e07f0d7d8f92/schema/FilmTicketingSystem/table/myfilm">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="dfdba693-4260-4b22-b2bd-32b5ba0ffd50">
-          <filtering>
-            <filter text="" />
-          </filtering>
         </state>
       </provider>
     </entry>
@@ -1042,6 +982,45 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yc/one/Test/Test01.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/yc/one/UI/MainUI/MainUI3.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/yc/one/Test/Test1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://4b948f79-1192-446d-ac70-e07f0d7d8f92/schema/FilmTicketingSystem/table/myfilm">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="65d8affd-a667-4879-bf33-7b54a3a7ddbc">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://4b948f79-1192-446d-ac70-e07f0d7d8f92/schema/FilmTicketingSystem/table/movie">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="65d8affd-a667-4879-bf33-7b54a3a7ddbc">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yc/one/Dao/AdminDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5368">
+          <caret line="244" column="24" lean-forward="true" selection-start-line="244" selection-start-column="24" selection-end-line="244" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yc/one/Util/MyFilmList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -1068,35 +1047,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yc/one/UI/MainUI/Seat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="132" column="35" selection-start-line="132" selection-start-column="35" selection-end-line="132" selection-end-column="35" />
+        <state relative-caret-position="2508">
+          <caret line="261" column="36" lean-forward="true" selection-start-line="261" selection-start-column="36" selection-end-line="261" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yc/one/Util/InitInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yc/one/Util/SeatIndex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yc/one/UI/MainUI/MainUI3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1826">
-          <caret line="94" column="51" selection-start-line="94" selection-start-column="51" selection-end-line="94" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yc/one/Test/Test1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="154">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
         </state>
       </provider>
     </entry>
