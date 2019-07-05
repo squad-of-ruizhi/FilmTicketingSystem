@@ -2,9 +2,9 @@ package com.yc.one.Util;
 
 import java.util.Arrays;
 
+import static com.yc.one.Util.InitInfo.arr;
+
 public class SeatIndex {
-    private static String[] arr = new String[40];
-    private int i = 0;
 
     public int SeatSelected(int x, int y) {  //获取座位号
         int index = (x - 1) * 8 + y - 1;

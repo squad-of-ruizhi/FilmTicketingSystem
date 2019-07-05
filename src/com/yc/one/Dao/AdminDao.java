@@ -1,11 +1,9 @@
 package com.yc.one.Dao;
 
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import com.yc.one.Util.InitInfo;
@@ -246,8 +244,30 @@ public class AdminDao {
         }else{
 			return false;
 		}
-
 	}
+
+	//从数据库拉取已选座位表
+    public String SeatIndexDownLoad(String mname){
+	    DBHelper dbHelper=new DBHelper();
+	    String sql="SELECT seats FROM FilmTicketingSystem.movie WHERE mname=?;";
+        List<Map<String, String>> list = dbHelper.find(sql, mname);
+        if (list != null && list.size() > 0) {
+            String str = list.get(0).toString();
+            str = str.substring(str.indexOf("=") + 1, str.lastIndexOf("}"));
+            return str;
+        }
+        return null;
+    }
+
+    public static void main(String[] args) {
+        AdminDao adminDao=new AdminDao();
+        String str=adminDao.SeatIndexDownLoad("大侦探皮卡丘");
+        str = str.substring(str.indexOf("[")+1 , str.lastIndexOf("]"));
+        String[] Seatarry=str.split(",");
+        //System.out.println(Arrays.toString(Seatarry));
+        System.out.println(Seatarry[2].trim());
+
+    }
 
 }
 

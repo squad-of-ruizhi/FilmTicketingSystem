@@ -9,4 +9,5 @@ public class InitInfo {
     public  static String moviename;
     public static String price;
     public static String date;
+    public static String[] arr = new String[40];; //已选座位表，也用于传入数据库中的已选座位表
 }

@@ -26,6 +26,7 @@ public class Seat {
 	private Label label_24;
 	private Label label_25;
 	private int index=0; //已选座位号
+	private int i=0;
 	/**
 	 * Launch the application.
 	 */
@@ -131,63 +132,79 @@ public class Seat {
 		label_8.setText("银幕中央");
 		Map<Label,MySeat> map = new HashMap<>();
 
+		//已选座位表获取并转String[]
+		String str=adminDao.SeatIndexDownLoad(InitInfo.moviename);
+		str = str.substring(str.indexOf("[")+1 , str.lastIndexOf("]"));
+		String[] Seatarry=str.split(",");
+		InitInfo.arr=Seatarry;   //向InitInfo.arr存入已购票座位表
 
 		//座位表输出
 		for(int row=1;row<6;row++){
-			for(int col=1;col<9;col++){
+			for(int col=1;col<9;col++) {
+				SeatIndex seatNO = new SeatIndex();
+				i=seatNO.SeatSelected(row,col);
+				int labelID = seatNO.SeatSelected(row, col);
 				Label la = new Label(composite_2, SWT.NONE);
-				la.setImage(SWTResourceManager.getImage(Seat.class, "/image/空位.png"));
-				la.setBounds(198+120*col, 338+83*row, 48, 41);
-				map.put(la,new MySeat(row,col));
-				SeatIndex seatNO= new SeatIndex();
-				//int index=seatNO.SeatSelected(row,col);	//获取座位号
+				la.setData(labelID);
+				la.setBounds(198 + 120 * col, 338 + 83 * row, 48, 41);
+				map.put(la, new MySeat(row, col));
+				if (InitInfo.arr[i].trim().equals("null")) {
+					la.setImage(SWTResourceManager.getImage(Seat.class, "/image/空位.png"));
 
-				la.addMouseListener(new MouseAdapter() {
-					private boolean clicked;
-					@Override
-					public void mouseDown(MouseEvent e) {
-						Label l = (Label)e.getSource();
-						MySeat mseat = map.get(l);
-						if(clicked){
-							//System.out.println(index);	//测试点4：座位号
-							for (int a=0;a<list.size();a++){
-								if(mseat.getX()==list.get(a).getX()&&list.get(a).getY()==mseat.getY())
-								{list.remove(a);}
+
+					la.addMouseListener(new MouseAdapter() {
+						private boolean clicked;
+
+						@Override
+						public void mouseDown(MouseEvent e) {
+							Label l = (Label) e.getSource();
+							MySeat mseat = map.get(l);
+							if (clicked) {
+								//System.out.println(index);	//测试点4：座位号
+								for (int a = 0; a < list.size(); a++) {
+									if (mseat.getX() == list.get(a).getX() && list.get(a).getY() == mseat.getY()) {
+										list.remove(a);
+									}
+								}
+								l.setImage(SWTResourceManager.getImage(Seat.class, "/image/空位.png"));
+
+
+								//座位信息传递
+								label_24.setText("座位：" + InitInfo.seatlocation);
+								index = seatNO.SeatSelected(mseat.getX(), mseat.getY());//已选座位号获取
+								System.out.println("测试点7：" + index);        //测试点7：座位号
+								clicked = false;
+								System.out.println("测试点9：" + seatNO.ArrOut(index));        //测试点9：写入数据库的数据
+								InitInfo.SeatsSelected = seatNO.ArrOut(index);
+								price = price - 50;
+								label_25.setText("总价：" + price + "元");
+
+							} else {
+								clicked = true;
+								l.setImage(SWTResourceManager.getImage(Seat.class, "/image/已选位.png"));
+								list.add(mseat);
+								InitInfo.seatlocation = mseat.getX() + "排" + mseat.getY() + "列";
+								//System.out.println("测试点6："+mseat.getX()+","+mseat.getY());	//测试点6：座位坐标
+
+								index = seatNO.SeatSelected(mseat.getX(), mseat.getY()); //已选座位号获取
+								//System.out.println("测试点7："+index);		//测试点7：座位号
+								InitInfo.SeatsSelected = seatNO.ArrIn(index);//存入已选座位
+								System.out.println("测试点8：" + seatNO.ArrIn(index));        //测试点8：写入数据库的数据
+								adminDao.SeatIndexUpdate(InitInfo.moviename, InitInfo.SeatsSelected); //将获取的已选座位存入数据库
+
+								label_24.setText("座位：" + InitInfo.seatlocation);
+
+								price = price + 50;
+								label_25.setText("总价：" + price + "元");
 							}
-							l.setImage(SWTResourceManager.getImage(Seat.class, "/image/空位.png"));
 
-
-							//座位信息传递
-							label_24.setText("座位："+InitInfo.seatlocation);
-							index=seatNO.SeatSelected(mseat.getX(),mseat.getY());//已选座位号获取
-							System.out.println("测试点7："+index);		//测试点7：座位号
-							clicked = false;
-							System.out.println("测试点9："+seatNO.ArrOut(index));		//测试点9：写入数据库的数据
-							InitInfo.SeatsSelected=seatNO.ArrOut(index);
-							price=price-50;
-							label_25.setText("总价："+price+"元");
-							
-						}else{
-							clicked = true;
-							l.setImage(SWTResourceManager.getImage(Seat.class, "/image/已选位.png"));
-							list.add(mseat);
-							InitInfo.seatlocation=mseat.getX()+"排"+mseat.getY()+"列";
-							//System.out.println("测试点6："+mseat.getX()+","+mseat.getY());	//测试点6：座位坐标
-
-							index=seatNO.SeatSelected(mseat.getX(),mseat.getY()); //已选座位号获取
-							//System.out.println("测试点7："+index);		//测试点7：座位号
-							InitInfo.SeatsSelected=seatNO.ArrIn(index);//存入已选座位
-							System.out.println("测试点8："+seatNO.ArrIn(index));		//测试点8：写入数据库的数据
-							adminDao.SeatIndexUpdate(InitInfo.moviename,InitInfo.SeatsSelected); //将获取的已选座位存入数据库
-
-							label_24.setText("座位："+InitInfo.seatlocation);
-
-							price=price+50;
-							label_25.setText("总价："+price+"元");
+							shell.layout();
 						}
-						shell.layout();
-					}
-				});
+					});
+				} else{
+					la.setImage(SWTResourceManager.getImage(Seat.class, "/image/已售位.png"));
+					shell.layout();
+			} //else尾
 			}
 
 		}
