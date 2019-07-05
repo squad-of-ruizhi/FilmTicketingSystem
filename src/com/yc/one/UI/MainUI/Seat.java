@@ -149,7 +149,7 @@ public class Seat {
 						Label l = (Label)e.getSource();
 						MySeat mseat = map.get(l);
 						if(clicked){
-							System.out.println(index);	//测试点4：座位号
+							//System.out.println(index);	//测试点4：座位号
 							for (int a=0;a<list.size();a++){
 								if(mseat.getX()==list.get(a).getX()&&list.get(a).getY()==mseat.getY())
 								{list.remove(a);}
@@ -159,23 +159,29 @@ public class Seat {
 
 							//座位信息传递
 							label_24.setText("座位："+InitInfo.seatlocation);
+							index=seatNO.SeatSelected(mseat.getX(),mseat.getY());//已选座位号获取
+							System.out.println("测试点7："+index);		//测试点7：座位号
 							clicked = false;
+							System.out.println("测试点9："+seatNO.ArrOut(index));		//测试点9：写入数据库的数据
+							InitInfo.SeatsSelected=seatNO.ArrOut(index);
 							price=price-50;
 							label_25.setText("总价："+price+"元");
 							
 						}else{
+							clicked = true;
 							l.setImage(SWTResourceManager.getImage(Seat.class, "/image/已选位.png"));
 							list.add(mseat);
 							InitInfo.seatlocation=mseat.getX()+"排"+mseat.getY()+"列";
-							System.out.println("测试点6："+mseat.getX()+","+mseat.getY());	//测试点6：座位坐标
+							//System.out.println("测试点6："+mseat.getX()+","+mseat.getY());	//测试点6：座位坐标
 
 							index=seatNO.SeatSelected(mseat.getX(),mseat.getY()); //已选座位号获取
-							InitInfo.SeatsSelected=Arrays.toString(seatNO.ArrIn(index));//存入已选座位
-							System.out.println(Arrays.toString(seatNO.ArrIn(index)));
+							//System.out.println("测试点7："+index);		//测试点7：座位号
+							InitInfo.SeatsSelected=seatNO.ArrIn(index);//存入已选座位
+							System.out.println("测试点8："+seatNO.ArrIn(index));		//测试点8：写入数据库的数据
 							adminDao.SeatIndexUpdate(InitInfo.moviename,InitInfo.SeatsSelected); //将获取的已选座位存入数据库
 
 							label_24.setText("座位："+InitInfo.seatlocation);
-							clicked = true;
+
 							price=price+50;
 							label_25.setText("总价："+price+"元");
 						}
@@ -279,7 +285,6 @@ public class Seat {
 		label_24.setBounds(63, 560, 300, 40);
 
 		label_25 = new Label(composite_3, SWT.NONE);
-		//label_25.setText("总价："+price+"元");
 		label_25.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 14, SWT.NORMAL));
 		label_25.setBounds(63, 641, 150, 30);
 
@@ -297,6 +302,7 @@ public class Seat {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				adminDao.OrderUpdate(InitInfo.account,InitInfo.moviename,price,InitInfo.seatlocation,price/50);
+				adminDao.SeatIndexUpdate(InitInfo.moviename,InitInfo.SeatsSelected); //将获取的已选座位存入数据库
 				MessageBox mb = new MessageBox(shell,SWT.YES | SWT.NO | SWT.CANCEL |SWT.ICON_WORKING);
 				mb.setText("提示:");
 				mb.setMessage("购票成功,请到前台领取票据！");

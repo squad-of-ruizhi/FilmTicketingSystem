@@ -239,11 +239,11 @@ public class AdminDao {
 	//将已选座位表上传到数据库
 	public boolean SeatIndexUpdate(String mname,String arry){
 		DBHelper dbHelper = new DBHelper();
-		String sql ="UPDATE `FilmTicketingSystem`.`movie` SET `seats` = "+arry+" WHERE (`mname` = "+mname+");";
+		String sql ="UPDATE `FilmTicketingSystem`.`movie` SET `seats` = ? WHERE (`mname` = ?);";
 		int result = dbHelper.update(sql,arry,mname);
 		if (result != -1) {
 			return true;
-		}else{
+        }else{
 			return false;
 		}
 
