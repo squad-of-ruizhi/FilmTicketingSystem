@@ -1,5 +1,4 @@
 package com.yc.one.UI.MainUI;
-
 import com.swtdesigner.SWTResourceManager;
 import com.yc.one.Dao.AdminDao;
 import com.yc.one.Util.InitInfo;
@@ -132,6 +131,7 @@ public class Seat {
 		label_8.setText("银幕中央");
 		Map<Label,MySeat> map = new HashMap<>();
 
+
 		//座位表输出
 		for(int row=1;row<6;row++){
 			for(int col=1;col<9;col++){
@@ -170,7 +170,8 @@ public class Seat {
 							System.out.println("测试点6："+mseat.getX()+","+mseat.getY());	//测试点6：座位坐标
 
 							index=seatNO.SeatSelected(mseat.getX(),mseat.getY()); //已选座位号获取
-							InitInfo.SeatsSelected=seatNO.ArrIn(index);	//存入已选座位
+							InitInfo.SeatsSelected=Arrays.toString(seatNO.ArrIn(index));//存入已选座位
+							System.out.println(Arrays.toString(seatNO.ArrIn(index)));
 							adminDao.SeatIndexUpdate(InitInfo.moviename,InitInfo.SeatsSelected); //将获取的已选座位存入数据库
 
 							label_24.setText("座位："+InitInfo.seatlocation);
@@ -274,7 +275,6 @@ public class Seat {
 		label_23.setBounds(50, 534, 548, 20);
 
 		label_24 = new Label(composite_3, SWT.NONE);
-		//label_24.setText("座位："+InitInfo.seatlocation);
 		label_24.setFont(SWTResourceManager.getFont("Microsoft YaHei UI", 14, SWT.NORMAL));
 		label_24.setBounds(63, 560, 300, 40);
 

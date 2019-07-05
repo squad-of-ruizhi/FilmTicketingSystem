@@ -237,10 +237,10 @@ public class AdminDao {
 	}
 
 	//将已选座位表上传到数据库
-	public boolean SeatIndexUpdate(String mname,String[] arry){
+	public boolean SeatIndexUpdate(String mname,String arry){
 		DBHelper dbHelper = new DBHelper();
-		String sql ="insert into  movie (seats) VALUES (arry) where mnane=mname;";
-		int result = dbHelper.update(sql,mname);
+		String sql ="UPDATE `FilmTicketingSystem`.`movie` SET `seats` = "+arry+" WHERE (`mname` = "+mname+");";
+		int result = dbHelper.update(sql,arry,mname);
 		if (result != -1) {
 			return true;
 		}else{
