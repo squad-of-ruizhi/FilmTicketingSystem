@@ -52,6 +52,7 @@ public class MovieUI {
 		shell.setBackgroundMode(SWT.INHERIT_DEFAULT);
 		shell.setBackgroundImage(SWTResourceManager.getImage(MovieUI.class, "/image/白背景.jpg"));
 		shell.setSize(1920, 1080);
+		shell.setEnabled(false);	//不可改变大小
 		shell.setImage(SWTResourceManager.getImage(Login.class, "/image/『小酒馆』剑与魔法 · 旅途中的休憩时光_109951163674078407.jpg"));
 		shell.setText("近期热门电影");
 		

@@ -146,7 +146,7 @@ public class Seat {
 				int labelID = seatNO.SeatSelected(row, col);
 				Label la = new Label(composite_2, SWT.NONE);
 				la.setData(labelID);
-				la.setBounds(198 + 120 * col, 338 + 83 * row, 48, 41);
+				la.setBounds(80 + 120 * col, 260 + 83 * row, 48, 41);
 				map.put(la, new MySeat(row, col));
 				if (InitInfo.arr[i].trim().equals("null")) {
 					la.setImage(SWTResourceManager.getImage(Seat.class, "/image/空位.png"));
